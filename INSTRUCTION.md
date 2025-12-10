@@ -13,3 +13,11 @@ Cet exercice permet de pratiquer :
 
 - la déclaration de variables simples ;
 - l’affichage structuré de données dans la console.
+
+## Debug et Fix
+
+L'objectif de l'exercice [`Debug et Fix`](Concepts-Base/Debug.java) est identifier l'erreur et le corriger.
+
+Le programme est censé afficher le message: Jva est est cool
+
+-identifier erreur est corrige la
