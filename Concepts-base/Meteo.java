@@ -5,3 +5,4 @@ public class Meteo {
     }
 }
 
+//Cette exercice est corrigé.
