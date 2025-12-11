@@ -18,6 +18,14 @@ Cet exercice permet de pratiquer :
 
 L'objectif de l'exercice [`Debug et Fix`](Concepts-Base/Debug.java) est identifier l'erreur et le corriger.
 
-Le programme est censé afficher le message: Jva est est cool
+Le programme est censé afficher le message: "Java est est cool"
 
 -identifier erreur est corrige la
+
+##  Stoker le titre d'un film
+L'objectif de l'exercice [`le titre d'un film`](Concepts-Base/Film.java) est de stocker une variable textuel et de l'afficher .
+Le programme est censé afficher le message: "Mon film préfere est "
+- déclaration une variables ;
+- l’affiche  là dans la console.
+
+
