@@ -37,7 +37,7 @@ La méthode main fonctionne comme une classe : elle s’ouvre et se ferme aussi 
 Elle contient le code qui sera exécuté lorsque le programme démarre.
 Dans cet exemple, l’instruction println sera exécutée, ce qui affichera **Salut** à l’écran.
 
-**Excercice pratique**[INSTRUCTION](INSTRUCTION.md/)
+**Excercice pratique: Debug & fix** la consigne ici [INSTRUCTION](INSTRUCTION.md/)
 
 ### Les variables
 #### Les variables en programmation
@@ -87,6 +87,6 @@ Si l’on affiche la variable :
 `System.out.println(name);`
 Le programme affichera :
 `Moumin`
-
+**Exercice pratique : Stocker le titre d'un film** trouver la consigne ici  [INSTRUCTION](INSTRUCTION.md/)
 
 **_To be continued..._**
