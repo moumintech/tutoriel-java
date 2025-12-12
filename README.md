@@ -80,7 +80,7 @@ On peut aussi déclarer et affecter en une seule ligne :
 #### Modifier la valeur d’une variable
 
 Une variable peut changer de valeur au cours du programme :
-`String nom = "Zam"; nom= "Moumin `
+`String nom = "Zam"; nom= "Moumin ;`
 À la fin, name contient "Moumin".
 Si l’on affiche la variable :
 `System.out.println(name);`
