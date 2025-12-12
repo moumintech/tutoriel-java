@@ -5,15 +5,14 @@ Objectif: progresser étape par étapeavec des exercice concrets .
 
 ## Sommaire
 
-#### Concepts de base
+## Concepts de base
 
-- 1.[Introduction](###Introduction)
-- 1.1 La structure des grammes Java
-- 2.[Les variables](###Lesvariables)
+- [Introduction](#introduction)
+- [Les variables](#les-variables)
 
 ## Leçons rapides
 
-### Introduction
+## Introduction
 
 Java est l’un des langages de programmation les plus populaires. Il peut s’exécuter sur différentes plateformes, y compris les ordinateurs, les systèmes embarqués et le mobile. On peut utiliser Java pour développer des applications, des jeux, des logiciels bancaires, des applications web et bien plus encore. Son slogan bien connu est : " Write once, run anywhere!"
 On genere des sorties avec l'instruction
@@ -39,7 +38,7 @@ Dans cet exemple, l’instruction println sera exécutée, ce qui affichera **Sa
 
 **Excercice pratique: Debug & fix** la consigne ici [INSTRUCTION](INSTRUCTION.md/)
 
-### Les variables
+## Les variables
 #### Les variables en programmation
 
 Dans un programme, nous travaillons constamment avec des valeurs : du texte, des nombres, des données diverses.
@@ -88,5 +87,62 @@ Si l’on affiche la variable :
 Le programme affichera :
 `Moumin`
 **Exercice pratique : Stocker le titre d'un film** trouver la consigne ici  [INSTRUCTION](INSTRUCTION.md/)
+**Les types de variables en Java**
+
+En Java, il existe plusieurs types de données que l’on peut utiliser pour déclarer des variables.
+Chaque type sert à stocker un genre précis de valeur.
+*Le type int*
+
+Le type int est utilisé pour stocker des nombres entiers (sans décimales), appelés integers en programmation.
+`int prix = 5;`
+**Les types pour les nombres décimaux**
+Le type ***double***
+
+Pour travailler avec des nombres décimaux, on utilise généralement le type double.
+`double prix = 5.5;`
+Le type ***float***
+
+Il existe aussi le type float, qui permet également de stocker des nombres décimaux.
+Lorsqu’on utilise un float, il est obligatoire d’ajouter le suffixe f à la valeur.
+`float prix = 5.5f;`
+
+**Différence entre float et double**
+
+float :
+
+- Utilise moins de mémoire
+
+- Est moins précis
+
+- Les calculs sont légèrement plus rapides
+
+double :
+
+- Utilise plus de mémoire
+
+- Est plus précis
+
+- Recommandé pour la majorité des cas
+
+Règle générale :
+
+Utilisez float lorsque la mémoire est critique.
+
+Utilisez double pour des calculs précis, par exemple pour des devises ou des calculs financiers.
+
+**Le type char**
+
+Le type char permet de stocker un seul caractère.
+
+Contrairement au type String, il utilise des guillemets simples
+`char  lettre = 'Z';`
+Le type boolean
+
+Le type boolean est utilisé pour représenter des valeurs logiques.
+Il ne peut contenir que deux valeurs : true ou false.
+
+Ce type est très utile pour gérer des conditions ou des états.
+`boolean uneReine =true; `
+ `boolean uneParesseuse =false; `
 
 **_To be continued..._**
