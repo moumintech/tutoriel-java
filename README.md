@@ -9,7 +9,8 @@ Objectif: progresser étape par étapeavec des exercice concrets .
 
 - [Introduction](#introduction)
 - [Les variables](#les-variables)
-- [Les opérateur en Java ](#Les-Opérateur-en-java)
+- [Les opérateurs arithmétiques ](#Les-Opérateurs-arithmétiques)
+- [Les commentaires ](#Les-commentaires)
 
 ## Leçons rapides
 
@@ -146,7 +147,7 @@ Ce type est très utile pour gérer des conditions ou des états.
 `boolean uneReine =true; `
  `boolean uneParesseuse =false; `
 
-## Les Opérateur en java 
+## Les Opérateurs arithmétiques
 Java permet d’effectuer des calculs grâce à des opérateurs mathématiques courants.
 
 ###  Addition (`+`)
@@ -242,7 +243,7 @@ System.out.println(reste);
 
 
 
-## Concaténation de chaînes de caractères
+### Concaténation de chaînes de caractères
 En Java, l’opérateur `+` permet aussi d’assembler des **chaînes de caractères** (String).
 Ce processus s’appelle la **concaténation**.
 
@@ -256,6 +257,67 @@ System.out.println(nomComplet);
  Résultat affiché : `John Doe`
 
 
- 
+ Voici une **leçon améliorée, claire et bien structurée** sur les **commentaires en Java**, avec des ajouts utiles et des exemples corrigés.
+
 **Excercice pratique: Calculs dans un stand de barbe à papa ** la consigne ici [INSTRUCTION](INSTRUCTION.md/)
+
+## Les commentaires en Java
+
+
+
+### Qu’est-ce qu’un commentaire ?
+
+Les commentaires sont des **annotations écrites dans le code** pour expliquer ce que fait le programme.
+
+Le **code** est destiné à l’ordinateur.
+ Les **commentaires** sont destinés aux humains (développeurs, enseignants, collègues, ou vous-même plus tard).
+
+Les commentaires **ne sont jamais exécutés** par le programme.
+
+
+
+### Commentaires sur une seule ligne
+
+Un commentaire sur une ligne commence par **deux barres obliques `//`**.
+Tout ce qui se trouve après `//` sur la même ligne est ignoré par Java.
+
+```java
+// Ceci est un commentaire sur une seule ligne
+int age = 20; // Déclaration de l’âge de l’utilisateur
+```
+
+
+### Commentaires sur plusieurs lignes
+
+Lorsque vous avez besoin d’écrire un commentaire plus long ou de commenter plusieurs lignes, vous pouvez utiliser :
+
+`/*` pour commencer
+`*/` pour terminer
+
+```java
+/*
+Ceci est un commentaire
+sur plusieurs lignes.
+Il permet d’expliquer
+une partie importante du programme.
+*/
+```
+
+
+
+### Commenter temporairement du code
+
+Les commentaires peuvent aussi servir à **désactiver du code temporairement**, par exemple lorsqu’une fonctionnalité est en cours de développement ou en test.
+
+```java
+/*
+int resultat = calculerTotal();
+System.out.println(resultat);
+*/
+```
+
+ Le code est conservé mais **non exécuté**.
+
+
+ 
 be continued..._**
