@@ -9,6 +9,7 @@ Objectif: progresser étape par étapeavec des exercice concrets .
 
 - [Introduction](#introduction)
 - [Les variables](#les-variables)
+- [Les opérateur en Java ](#Les-Opérateur-en-java)
 
 ## Leçons rapides
 
@@ -145,4 +146,115 @@ Ce type est très utile pour gérer des conditions ou des états.
 `boolean uneReine =true; `
  `boolean uneParesseuse =false; `
 
-**_To be continued..._**
+## Les Opérateur en java 
+Java permet d’effectuer des calculs grâce à des opérateurs mathématiques courants.
+
+###  Addition (`+`)
+
+L’opérateur `+` permet d’additionner deux valeurs.
+
+```java
+int x = 5;
+int y = 3;
+System.out.println(x + y);
+```
+
+Résultat affiché : `8`
+
+Vous pouvez aussi stocker le résultat dans une variable :
+
+```java
+double prix1 = 24.99;
+double prix2 = 19.45;
+double somme = prix1 + prix2;
+System.out.println(somme);
+```
+
+ Résultat affiché : `44.44`
+
+
+###  Soustraction (`-`)
+
+L’opérateur `-` permet de soustraire une valeur à une autre.
+
+```java
+int salaire = 9000;
+int taxe = 500;
+int resultat = salaire - taxe;
+System.out.println(resultat);
+```
+
+Résultat affiché : `8500`
+
+
+
+###  Multiplication (`*`)
+
+L’astérisque `*` permet de multiplier deux valeurs.
+
+Exemple : calculer 20 % d’un prix.
+
+```java
+int prix = 1200;
+System.out.println(prix * 0.2);
+```
+
+ Résultat affiché : `240.0`
+
+
+
+###  Division (`/`)
+
+L’opérateur `/` permet de diviser une valeur par une autre.
+
+```java
+int montant = 9000;
+int prix = 49;
+int resultat = montant / prix;
+System.out.println(resultat);
+```
+
+ Résultat affiché : `183`
+
+ Avec des `int`, le résultat est un **nombre entier**.
+Pour obtenir un résultat avec des décimales, utilisez `double` :
+
+```java
+double resultat = (double) montant / prix;
+System.out.println(resultat);
+```
+
+
+
+###  Modulo (`%`)
+
+L’opérateur modulo `%` permet d’obtenir le **reste d’une division**.
+
+Exemple : combien d’articles restent si on les range par boîtes de 5 ?
+
+```java
+int items = 23;
+int reste = items % 5;
+System.out.println(reste);
+```
+
+ Résultat affiché : `3`
+
+
+
+## Concaténation de chaînes de caractères
+
+En Java, l’opérateur `+` permet aussi d’assembler des **chaînes de caractères** (String).
+Ce processus s’appelle la **concaténation**.
+
+```java
+String firstName = "Jem";
+String lastName = "Smith";
+String fullName = firstName + " " + lastName;
+System.out.println(fullName);
+```
+
+ Résultat affiché : `Jem Smith`
+
+
+be continued..._**
