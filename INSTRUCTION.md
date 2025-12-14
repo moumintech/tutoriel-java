@@ -45,6 +45,45 @@ Ce logiciel doit stocker et afficher les informations suivantes concernant un pa
 - sa température corporelle ;
 
 - son statut d’hospitalisation
-  
+
+
+## 🎄 Exercice Java – Calculs dans un stand de barbe à papa .
+
+L' Objectif de l’exercice est de te permettre de **pratiquer les opérateurs de calcul en Java** .
+
+
+**Contexte**
+
+À l’approche de Noël, un **stand de barbe à papa** est installé sur un marché de Noël.
+Le commerçant souhaite un petit programme Java qui lui permette de **calculer automatiquement le total des ventes**, les **réductions**, et la **monnaie à rendre** aux clients.
+**Ce que tu vas apprendre et pratiquer**
+
+* La **déclaration de variables** (`int`, `double`)
+* Les **opérateurs arithmétiques** :
+
+  * addition (`+`)
+  * soustraction (`-`)
+  * multiplication (`*`)
+  * division (`/`)
+* L’**affectation du résultat d’un calcul à une variable**
+* L’**affichage des résultats** avec `System.out.println`
+
+
+### Consigne
+
+1. Déclare une variable correspondant au **prix d’une barbe à papa** .
+2. Déclare une variable correspondant au **nombre de barbes à papa achetées** par un client.
+3. Calcule le **montant total à payer**.
+4. Applique une **réduction de Noël de 10 %** sur le total.
+5. Affiche :
+
+   * le prix unitaire
+   * le nombre d’articles
+   * le total avant réduction
+   * le montant de la réduction
+   * le total final à payer
+
+
+
 
 
