@@ -243,18 +243,19 @@ System.out.println(reste);
 
 
 ## Concaténation de chaînes de caractères
-
 En Java, l’opérateur `+` permet aussi d’assembler des **chaînes de caractères** (String).
 Ce processus s’appelle la **concaténation**.
 
 ```java
-String firstName = "Jem";
-String lastName = "Smith";
-String fullName = firstName + " " + lastName;
-System.out.println(fullName);
+String nom = "John";
+String prenon = "Doe";
+String nomComplet = nom + " " + prenom;
+System.out.println(nomComplet);
 ```
 
- Résultat affiché : `Jem Smith`
+ Résultat affiché : `John Doe`
 
 
+ 
+**Excercice pratique: Calculs dans un stand de barbe à papa ** la consigne ici [INSTRUCTION](INSTRUCTION.md/)
 be continued..._**
