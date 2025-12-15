@@ -9,8 +9,12 @@ Objectif: progresser étape par étapeavec des exercice concrets .
 
 - [Introduction](#introduction)
 - [Les variables](#les-variables)
-- [Les opérateurs arithmétiques ](#Les-Opérateurs-arithmétiques)
-- [Les commentaires ](#Les-commentaires)
+- [Les opérateurs arithmétiques](#Les-Opérateurs-arithmétiques)
+- [Les commentaires](#Les-commentaires)
+
+
+##
+- [Les entrées utilisateur](Les-entrées-utilisateur)
 
 ## Leçons rapides
 
@@ -318,6 +322,132 @@ System.out.println(resultat);
 
  Le code est conservé mais **non exécuté**.
 
+## Les entrées utilisateur
+
+
+### Introduction : qu’est-ce qu’une entrée utilisateur ?
+
+Certains programmes ont besoin de **données fournies par l’utilisateur** pour fonctionner.
+
+Exemples :
+
+* Un **jeu** peut demander un surnom (pseudo) au joueur.
+* Un **convertisseur** peut demander une valeur à convertir (euros → dollars).
+* Un **programme de calcul** peut demander deux nombres.
+
+Pour cela, Java permet de lire ce que l’utilisateur tape au clavier : on parle **d’entrée utilisateur**.
+
+
+
+### La classe Scanner
+
+En Java, l’une des façons les plus courantes de récupérer une entrée utilisateur est d’utiliser la **classe `Scanner`**.
+
+Avant de l’utiliser, il faut **l’importer**.
+
+```java
+import java.util.Scanner;
+```
+
+Cette ligne doit toujours être placée **en haut du fichier**, avant la déclaration de la classe.
+
+
+
+### Création d’un objet Scanner
+
+Après l’importation, on doit créer un **objet Scanner** pour lire les données entrées au clavier.
+
+```java
+Scanner sc = new Scanner(System.in);
+```
+
+* `Scanner` : le type de l’objet
+* `sc` : le nom de l’objet (on peut choisir un autre nom)
+* `System.in` : indique que l’entrée vient du clavier
+
+ Pour l’instant, retiens simplement **la syntaxe**.
+
+### Lire une entrée de type String
+
+Pour lire un texte (par exemple un nom ou un pseudo), on utilise :
+
+```java
+nextLine()
+```
+
+#### Exemple : demander un pseudo à l’utilisateur
+
+```java
+import java.util.Scanner;
+
+public class Main {
+    public static void main(String[] args) {
+
+        Scanner sc = new Scanner(System.in);
+
+        System.out.print("Entrez votre pseudo : ");
+        String pseudo = sc.nextLine();
+
+        System.out.println("Bienvenue " + pseudo + " !");
+    }
+}
+```
+
+ Ici :
+
+* l’utilisateur tape un texte
+* le texte est stocké dans la variable `pseudo`
+
+###  Lire une entrée de type entier (int)
+
+Pour lire un nombre entier, on utilise :
+
+```java
+nextInt()
+```
+
+#### Exemple : demander l’âge de l’utilisateur
+
+```java
+Scanner sc = new Scanner(System.in);
+
+System.out.print("Entrez votre âge : ");
+int age = sc.nextInt();
+
+System.out.println("Vous avez " + age + " ans.");
+```
+
+
+
+### Lire plusieurs entrées avec un seul Scanner
+
+Un **même objet Scanner** peut être utilisé pour lire plusieurs valeurs.
+
+#### Exemple : nom + âge
+
+```java
+import java.util.Scanner;
+
+public class Main {
+    public static void main(String[] args) {
+
+        Scanner sc = new Scanner(System.in);
+
+        System.out.print("Entrez votre nom : ");
+        String nom = sc.nextLine();
+
+        System.out.print("Entrez votre âge : ");
+        int age = sc.nextInt();
+
+        System.out.println("Nom : " + nom);
+        System.out.println("Âge : " + age);
+    }
+}
+```
+
+
+
+
 
  
-be continued..._**
+**be continued..._**
