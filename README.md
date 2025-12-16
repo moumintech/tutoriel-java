@@ -622,6 +622,192 @@ if (total >= 100) {
 System.out.println("Total à payer : " + total + " €");
 ```
 
+## L’instruction conditionnelle switch
+###  Introduction
+
+Dans certains programmes, il est nécessaire de **tester une même variable contre plusieurs valeurs possibles**.
+
+ Exemple :
+
+* Un programme reçoit un **numéro de jour** et affiche le **jour de la semaine correspondant**.
+* Un menu propose plusieurs **choix numérotés**.
+* Un système attribue une action selon un **code**.
+
+Lorsque l’on utilise plusieurs `if / else if`, le code peut devenir **long et difficile à lire**.
+ Dans ce cas, on utilise l’instruction **`switch`**.
+
+
+
+###  Qu’est-ce qu’un `switch` ?
+
+L’instruction `switch` permet de **comparer une variable à plusieurs valeurs possibles** (appelées `case`).
+
+ Principe :
+
+* La valeur testée est comparée à chaque `case`.
+* Lorsque la valeur correspond, le code associé s’exécute.
+* L’exécution s’arrête lorsqu’un `break` est rencontré.
+
+
+
+### Syntaxe générale du `switch`
+
+```java
+switch (variable) {
+    case valeur1:
+        // code
+        break;
+    case valeur2:
+        // code
+        break;
+    default:
+        // code exécuté si aucun cas ne correspond
+}
+```
+
+
+
+### Exemple simple : jours de la semaine (partiel)
+
+```java
+int jour = 1;
+
+switch (jour) {
+    case 1:
+        System.out.println("Lundi");
+        break;
+    case 2:
+        System.out.println("Mardi");
+        break;
+    case 3:
+        System.out.println("Mercredi");
+        break;
+    default:
+        System.out.println("Jour invalide");
+}
+```
+
+ Ici, seules les **trois premières valeurs** sont vérifiées.
+Tu peux continuer jusqu’à `7` pour couvrir toute la semaine.
+
+
+
+###  Exemple complet : 7 jours de la semaine
+
+```java
+int jour = 5;
+
+switch (jour) {
+    case 1:
+        System.out.println("Lundi");
+        break;
+    case 2:
+        System.out.println("Mardi");
+        break;
+    case 3:
+        System.out.println("Mercredi");
+        break;
+    case 4:
+        System.out.println("Jeudi");
+        break;
+    case 5:
+        System.out.println("Vendredi");
+        break;
+    case 6:
+        System.out.println("Samedi");
+        break;
+    case 7:
+        System.out.println("Dimanche");
+        break;
+    default:
+        System.out.println("Numéro de jour invalide");
+}
+```
+
+
+
+###  Rôle important du `break`
+
+Le mot-clé **`break` est essentiel**.
+
+ Sans `break`, le programme continue d’exécuter **les cas suivants**, même si la valeur ne correspond plus.
+
+#### Exemple sans `break` (comportement indésirable)
+
+```java
+int jour = 1;
+
+switch (jour) {
+    case 1:
+        System.out.println("Lundi");
+    case 2:
+        System.out.println("Mardi");
+    case 3:
+        System.out.println("Mercredi");
+}
+```
+
+ Résultat :
+
+```
+Lundi
+Mardi
+Mercredi
+```
+
+ C’est pourquoi **chaque `case` doit généralement se terminer par un `break`**.
+
+
+
+###  Le `default case`
+
+Le `default` est **optionnel**, mais fortement recommandé.
+
+ Il s’exécute lorsque **aucun `case` ne correspond** à la valeur testée.
+
+```java
+default:
+    System.out.println("Valeur non reconnue");
+```
+
+ Il permet de gérer les **erreurs ou cas imprévus**.
+
+
+
+###  Exemple concret : menu utilisateur
+
+```java
+int choix = 2;
+
+switch (choix) {
+    case 1:
+        System.out.println("Nouvelle partie");
+        break;
+    case 2:
+        System.out.println("Charger la partie");
+        break;
+    case 3:
+        System.out.println("Quitter le jeu");
+        break;
+    default:
+        System.out.println("Choix invalide");
+}
+```
+
+
+
+###  Quand utiliser `switch` plutôt que `if / else` ?
+
+ Utilise `switch` quand :
+
+* Tu testes **une seule variable**
+* Tu compares cette variable à **plusieurs valeurs précises**
+* Tu veux un code **plus lisible et structuré**
+
+ Évite `switch` si :
+
+* Les conditions sont complexes (`>`, `<`, `&&`, `||`)
+* Les tests ne sont pas basés sur l’égalité
 
 
  
