@@ -14,7 +14,8 @@ Objectif: progresser étape par étapeavec des exercice concrets .
 
 
 ##
-- [Les entrées utilisateur](Les-entrées-utilisateur)
+- [Les entrées utilisateur](#Les-entrées-utilisateurs)
+- [Les conditionnels](#Les-conditionnels)
 
 ## Leçons rapides
 
@@ -265,7 +266,7 @@ System.out.println(nomComplet);
 
 **Excercice pratique: Calculs dans un stand de barbe à papa ** la consigne ici [INSTRUCTION](INSTRUCTION.md/)
 
-## Les commentaires en Java
+## Les commentaires 
 
 
 
@@ -446,6 +447,180 @@ public class Main {
 ```
 
 
+## Les conditionnels 
+
+###  Introduction : la prise de décision en programmation
+
+En programmation, les **instructions conditionnelles** permettent à un programme de **prendre des décisions** et d’exécuter des actions différentes **selon une condition**.
+
+ Exemple :
+* Un jeu autorise l’accès à un niveau **si l’âge ou le score est suffisant**.
+* Un système affiche un message différent selon une **note**.
+
+
+
+###  L’instruction `if`
+
+L’instruction `if` est la **structure conditionnelle la plus utilisée** en Java.
+
+ **Principe :**
+
+* Si la condition est **vraie (`true`)**, le code dans le bloc `if` est exécuté.
+* Si la condition est **fausse (`false`)**, le bloc est ignoré.
+
+#### Syntaxe générale
+
+```java
+if (condition) {
+    // code exécuté si la condition est vraie
+}
+```
+
+
+
+### Les opérateurs de comparaison
+
+Les conditions utilisent des **opérateurs de comparaison** :
+
+| Opérateur | Signification       |
+| --------- | ------------------- |
+| `==`      | égal à              |
+| `!=`      | différent de        |
+| `<`       | inférieur à         |
+| `>`       | supérieur à         |
+| `<=`      | inférieur ou égal à |
+| `>=`      | supérieur ou égal à |
+
+ **Attention**
+
+* `=` → opérateur d’affectation
+* `==` → opérateur de comparaison (test d’égalité)
+
+
+
+###  Exemple simple avec `if`
+
+```java
+int age = 18;
+
+if (age >= 18) {
+    System.out.println("Accès autorisé");
+}
+```
+
+ Ici, le message s’affiche **uniquement si l’âge est supérieur ou égal à 18**.
+
+
+
+### L’instruction `if...else`
+
+Une instruction `if` peut être suivie d’un `else`.
+
+ **Principe :**
+
+* Le bloc `if` s’exécute si la condition est vraie.
+* Sinon, le bloc `else` s’exécute.
+
+#### Syntaxe
+
+```java
+if (condition) {
+    // code si vrai
+} else {
+    // code si faux
+}
+```
+
+#### Exemple
+
+```java
+int note = 9;
+
+if (note >= 10) {
+    System.out.println("Admis");
+} else {
+    System.out.println("Ajourné");
+}
+```
+
+
+
+###  Les conditions imbriquées (if dans if)
+
+Il est possible de placer une instruction `if` **à l’intérieur d’une autre**.
+
+#### Exemple
+
+```java
+int heure = 17;
+
+if (heure > 0) {
+    if (heure <= 16) {
+        System.out.println("Welcome");
+    } else {
+        System.out.println("Too late");
+    }
+} else {
+    System.out.println("Erreur");
+}
+```
+
+ Cette méthode fonctionne mais peut rendre le code **moins lisible**.
+
+
+
+###  L’instruction `else if`
+
+Pour tester **plusieurs conditions**, on utilise `else if`.
+
+ C’est souvent **préférable aux if imbriqués**.
+
+#### Syntaxe
+
+```java
+if (condition1) {
+    // code
+} else if (condition2) {
+    // code
+} else {
+    // code par défaut
+}
+```
+
+
+
+###  Exemple clair avec `if / else if / else`
+
+```java
+int heure = 15;
+
+if (heure <= 0) {
+    System.out.println("Erreur");
+} else if (heure <= 16) {
+    System.out.println("Welcome");
+} else {
+    System.out.println("Too late, too young");
+}
+```
+
+ Le programme vérifie les conditions **dans l’ordre**, et exécute **un seul bloc**.
+
+
+
+###  Exemple concret : programme de facturation
+
+```java
+double total = 120.0;
+
+if (total >= 100) {
+    total = total * 0.9; // remise de 10 %
+    System.out.println("Remise appliquée");
+} else {
+    System.out.println("Pas de remise");
+}
+
+System.out.println("Total à payer : " + total + " €");
+```
 
 
 
