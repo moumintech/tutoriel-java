@@ -13,9 +13,14 @@ Objectif: progresser étape par étapeavec des exercice concrets .
 - [Les commentaires](#Les-commentaires)
 
 
-##
+## Logique et exécution du programme
+
 - [Les entrées utilisateur](#Les-entrées-utilisateurs)
 - [Les conditionnels](#Les-conditionnels)
+- [Les structures conditionnelles](#Les-structures-conditionnels)
+- [Les structures conditionnelles](#Les-structures-conditionnels-itéraction)
+
+
 
 ## Leçons rapides
 
@@ -447,7 +452,8 @@ public class Main {
 ```
 
 
-## Les conditionnels 
+## Les structures conditionnelles
+
 
 ###  Introduction : la prise de décision en programmation
 
@@ -622,7 +628,9 @@ if (total >= 100) {
 System.out.println("Total à payer : " + total + " €");
 ```
 
-## L’instruction conditionnelle switch
+###  L’instruction conditionnelle switch
+
+
 ###  Introduction
 
 Dans certains programmes, il est nécessaire de **tester une même variable contre plusieurs valeurs possibles**.
@@ -808,6 +816,263 @@ switch (choix) {
 
 * Les conditions sont complexes (`>`, `<`, `&&`, `||`)
 * Les tests ne sont pas basés sur l’égalité
+
+
+
+
+### Conditions multiples et boucles en Java
+
+
+
+## Les conditions multiples
+
+###  Introduction
+
+Dans certains cas, une **seule condition n’est pas suffisante**.
+On a souvent besoin de **combiner plusieurs conditions** pour prendre une décision.
+
+ Exemple :
+
+* Vérifier si un âge est **supérieur à 18 ET inférieur à 50**
+* Vérifier si un utilisateur est **majeur OU administrateur**
+* Vérifier qu’une condition est **fausse**
+
+Pour cela, Java fournit des **opérateurs logiques**.
+
+
+
+### Les opérateurs logiques en Java
+
+| Opérateur | Nom       | Signification                             |         |                                        |
+| --------- | --------- | ----------------------------------------- | ------- | -------------------------------------- |
+| `&&`      | AND (ET)  | Toutes les conditions doivent être vraies |         |                                        |
+| `         |           | `                                         | OR (OU) | Au moins une condition doit être vraie |
+| `!`       | NOT (NON) | Inverse la condition                      |         |                                        |
+
+---
+
+### L’opérateur AND (`&&`)
+
+L’opérateur **ET** vérifie si **toutes les conditions sont vraies**.
+
+#### Exemple
+
+```java
+int age = 25;
+
+if (age > 18 && age < 50) {
+    System.out.println("Âge valide");
+}
+```
+
+ Le message s’affiche uniquement si **les deux conditions sont vraies**.
+
+
+###  L’opérateur OR (`||`)
+
+L’opérateur **OU** vérifie si **au moins une condition est vraie**.
+
+#### Exemple
+
+```java
+boolean estAdmin = true;
+int age = 16;
+
+if (age >= 18 || estAdmin) {
+    System.out.println("Accès autorisé");
+}
+```
+
+ Ici, l’accès est autorisé même si l’âge est inférieur à 18, car l’utilisateur est administrateur.
+
+
+
+###  L’opérateur NOT (`!`)
+
+L’opérateur **NOT** inverse une condition :
+
+* `true` devient `false`
+* `false` devient `true`
+
+#### Exemple
+
+```java
+boolean estConnecte = false;
+
+if (!estConnecte) {
+    System.out.println("Veuillez vous connecter");
+}
+```
+
+
+### Combiner plusieurs conditions
+
+On peut combiner plusieurs conditions avec des **parenthèses** pour plus de clarté.
+
+#### Exemple
+
+```java
+int age = 30;
+boolean permis = true;
+
+if ((age >= 18 && age <= 65) && permis) {
+    System.out.println("Autorisé à conduire");
+}
+```
+
+
+
+## Les structures itératives (boucle)
+
+
+###  Introduction aux boucles
+
+Les **boucles** permettent de **répéter un bloc de code plusieurs fois** tant qu’une condition est vraie.
+
+ Exemple :
+
+* Afficher les nombres de 1 à 10
+* Calculer une somme
+* Parcourir une liste
+
+
+
+###  La boucle `while`
+
+La boucle `while` s’exécute **tant que la condition est vraie**.
+
+#### Syntaxe
+
+```java
+while (condition) {
+    // code répété
+}
+```
+
+
+
+###  Exemple simple de boucle `while`
+
+```java
+int x = 5;
+
+while (x > 0) {
+    System.out.println(x);
+    x = x - 1;
+}
+```
+
+ La ligne `x = x - 1` est **essentielle**.
+Sans elle, la condition ne deviendrait jamais fausse → **boucle infinie**.
+
+---
+
+### Incrémentation et décrémentation
+
+Java fournit des **opérateurs raccourcis** :
+
+| Opération   | Forme longue | Forme courte |
+| ----------- | ------------ | ------------ |
+| Décrémenter | `x = x - 1`  | `x--`        |
+| Incrémenter | `x = x + 1`  | `x++`        |
+
+#### Exemple
+
+```java
+int x = 5;
+
+while (x > 0) {
+    System.out.println(x);
+    x--;
+}
+```
+
+###  Autres opérateurs abrégés
+
+Java permet aussi :
+
+```java
+x += 2;  // x = x + 2
+x -= 3;  // x = x - 3
+x *= 9;  // x = x * 9
+x /= 2;  // x = x / 2
+```
+
+
+### Exemple : afficher les nombres pairs
+
+```java
+int x = 0;
+
+while (x <= 10) {
+    System.out.println(x);
+    x += 2;
+}
+```
+
+
+### Exemple : calculer la somme de 1 à 100
+
+```java
+int num = 1;
+int somme = 0;
+
+while (num <= 100) {
+    somme += num;
+    num++;
+}
+
+System.out.println("La somme est : " + somme);
+```
+
+ La dernière instruction `print` est **en dehors** de la boucle.
+
+
+
+
+
+### La boucle `do while`
+
+La boucle `do while` est une **variation de la boucle while**.
+
+ Différence principale :
+
+* Le code s’exécute **au moins une fois**, même si la condition est fausse.
+
+#### Syntaxe
+
+```java
+do {
+    // code exécuté au moins une fois
+} while (condition);
+```
+
+ Note le **point-virgule `;`** à la fin.
+
+
+###  Exemple avec condition fausse
+
+```java
+int x = 0;
+
+do {
+    System.out.println("Ce message s'affiche une fois");
+} while (x > 5);
+```
+
+ Même si la condition est fausse, le code s’exécute **une fois**.
+
+
+
+### Différence entre `while` et `do while`
+
+| while                     | do while                    |
+| ------------------------- | --------------------------- |
+| Condition testée avant    | Condition testée après      |
+| Peut ne jamais s’exécuter | S’exécute au moins une fois |
+
+
+
 
 
  
