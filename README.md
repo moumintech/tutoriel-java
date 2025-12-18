@@ -16,9 +16,8 @@ Objectif: progresser étape par étapeavec des exercice concrets .
 ## Logique et exécution du programme
 
 - [Les entrées utilisateur](#Les-entrées-utilisateurs)
-- [Les conditionnels](#Les-conditionnels)
-- [Les structures conditionnelles](#Les-structures-conditionnels)
-- [Les structures conditionnelles itéraction](#Les-structures-conditionnels-itéraction)
+- [Les structures conditionnelles](#Les-structures-conditionnelles)
+- [Les structures conditionnelles itéraction](#Les-structures-conditionnelless-itéraction)
 
 
 
