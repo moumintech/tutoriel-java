@@ -1072,6 +1072,219 @@ do {
 
 
 
+# La boucle `for` en Java
+
+
+
+##  Introduction à la boucle `for`
+
+La boucle `for` est un **autre type de boucle** en Java.
+Elle est très utilisée lorsque l’on **connaît à l’avance le nombre de répétitions**.
+
+ Exemples d’utilisation :
+
+* Afficher les nombres de 1 à 10
+* Parcourir un tableau
+* Répéter une action un nombre précis de fois
+
+
+
+##  Structure de la boucle `for`
+
+La boucle `for` est composée de **trois parties** :
+
+```java
+for (initialisation; condition; incrémentation) {
+    // code répété
+}
+```
+
+### Détail des trois composants :
+
+1. **Initialisation**
+
+   * S’exécute **une seule fois**, au début de la boucle
+   * Sert à déclarer et initialiser la variable de contrôle
+
+2. **Condition**
+
+   * Testée **avant chaque itération**
+   * Tant qu’elle est vraie, la boucle continue
+
+3. **Incrémentation / décrémentation**
+
+   * S’exécute **après chaque itération**
+   * Sert à modifier la variable de contrôle
+
+
+
+##  Exemple simple de boucle `for`
+
+```java
+for (int i = 1; i <= 5; i++) {
+    System.out.println(i);
+}
+```
+
+ Déroulement :
+
+* `i` commence à 1
+* Tant que `i <= 5`, le code s’exécute
+* `i++` augmente la valeur de `i` de 1 à chaque tour
+
+
+
+##  Comparaison `while` vs `for`
+
+```java
+// avec while
+int i = 1;
+while (i <= 5) {
+    System.out.println(i);
+    i++;
+}
+
+// avec for
+for (int i = 1; i <= 5; i++) {
+    System.out.println(i);
+}
+```
+
+La boucle `for` est **plus compacte et plus lisible** quand on connaît les bornes.
+
+
+
+##  Conditions et incrémentations personnalisées
+
+La boucle `for` peut utiliser **n’importe quelle condition** et **n’importe quelle incrémentation**.
+
+### Exemple : compter de 0 à 20 de 2 en 2
+
+```java
+for (int i = 0; i <= 20; i += 2) {
+    System.out.println(i);
+}
+```
+
+
+
+##  Exemple : calculer une somme
+
+```java
+int somme = 0;
+
+for (int i = 1; i <= 100; i++) {
+    somme += i;
+}
+
+System.out.println("La somme est : " + somme);
+```
+
+ La variable `somme` accumule la valeur à chaque itération.
+
+
+
+## Le contrôle de boucle : `break`
+
+L’instruction **`break`** permet de **quitter immédiatement la boucle**, même si la condition est encore vraie.
+
+ `break` fonctionne :
+
+* dans les `switch`
+* dans les boucles `while`, `do while` et `for`
+
+
+### Exemple simple avec `break`
+
+```java
+for (int i = 1; i <= 10; i++) {
+    if (i == 5) {
+        break;
+    }
+    System.out.println(i);
+}
+```
+
+📌 Résultat :
+
+```
+1
+2
+3
+4
+```
+
+La boucle s’arrête dès que `i == 5`.
+
+
+
+##  Exemple concret : calculatrice avec arrêt
+
+ Contexte : on additionne des nombres tant que l’utilisateur n’entre pas `-1`.
+
+```java
+import java.util.Scanner;
+
+public class Main {
+    public static void main(String[] args) {
+
+        Scanner sc = new Scanner(System.in);
+        int somme = 0;
+
+        while (true) {
+            System.out.print("Entrez un nombre (-1 pour arrêter) : ");
+            int nombre = sc.nextInt();
+
+            if (nombre == -1) {
+                break;
+            }
+
+            somme += nombre;
+        }
+
+        System.out.println("Somme totale : " + somme);
+    }
+}
+```
+
+ Ici, `break` permet **d’arrêter la boucle volontairement**.
+
+
+
+##  L’instruction `continue`
+
+L’instruction **`continue`** permet de :
+
+* **sauter l’itération en cours**
+* passer directement à la suivante
+
+ Contrairement à `break`, la boucle **ne s’arrête pas**.
+
+
+
+### Exemple avec `continue`
+
+```java
+for (int i = 1; i <= 10; i++) {
+    if (i % 2 == 0) {
+        continue;
+    }
+    System.out.println(i);
+}
+```
+
+ Résultat :
+
+```
+1
+3
+5
+7
+9
+```
+
+ Les nombres pairs sont ignorés.
+
 
 
  
