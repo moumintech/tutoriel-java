@@ -46,7 +46,9 @@ Le point d’entrée de tout programme Java est la méthode main :
 
 public static void main ( String[]args ){ 
 Systeme.out.println( "Salut");
-}```
+}
+
+```
 
 La méthode main fonctionne comme une classe : elle s’ouvre et se ferme aussi avec des accolades.
 Elle contient le code qui sera exécuté lorsque le programme démarre.
