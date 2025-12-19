@@ -58,7 +58,7 @@ Elle contient le code qui sera exécuté lorsque le programme démarre.
 Dans cet exemple, l’instruction println sera exécutée, ce qui affichera **Salut** à l’écran.
 
 
-**Excercice pratique: Debug & fix la consigne ici [INSTRUCTION](INSTRUCTION.md/)**
+**Excercice pratique: Debug & fix la consigne ici  [INSTRUCTION](INSTRUCTION.md/)**
 
 
 ## Les variables
@@ -121,31 +121,38 @@ Le programme affichera :
 
 `Moumin`
 
+
 **Exercice pratique : Stocker le titre d'un film trouver la consigne ici [INSTRUCTION](INSTRUCTION.md/)**
 
 
 **Les types de variables en Java**
 
-En Java, il existe plusieurs types de données que l’on peut utiliser pour déclarer des variables.
+En Java, il existe plusieurs d'autres types de données que l’on peut utiliser pour déclarer des variables.
 Chaque type sert à stocker un genre précis de valeur.
-_Le type int_
 
-Le type int est utilisé pour stocker des nombres entiers (sans décimales), appelés integers en programmation.
-`int prix = 5;`
-**Les types pour les nombres décimaux**
-Le type **_double_**
+**_Le type int_**
 
-Pour travailler avec des nombres décimaux, on utilise généralement le type double.
+Le type **int** est utilisé pour stocker des nombres entiers (sans décimales), appelés **integers**en programmation.
+`int prix = 5;` .
+
+**Les types pour les nombres décimaux** .
+
+**Le type _double_** 
+
+Pour travailler avec des nombres décimaux, on utilise généralement le type **double**.
+
 `double prix = 5.5;`
-Le type **_float_**
+
+**Le type _float_**
 
 Il existe aussi le type float, qui permet également de stocker des nombres décimaux.
 Lorsqu’on utilise un float, il est obligatoire d’ajouter le suffixe f à la valeur.
+
 `float prix = 5.5f;`
 
 **Différence entre float et double**
 
-float :
+**float** :
 
 - Utilise moins de mémoire
 
@@ -153,7 +160,7 @@ float :
 
 - Les calculs sont légèrement plus rapides
 
-double :
+**double** :
 
 - Utilise plus de mémoire
 
@@ -172,17 +179,23 @@ Utilisez double pour des calculs précis, par exemple pour des devises ou des ca
 Le type char permet de stocker un seul caractère.
 
 Contrairement au type String, il utilise des guillemets simples
-`char  lettre = 'Z';`
-Le type boolean
 
-Le type boolean est utilisé pour représenter des valeurs logiques.
-Il ne peut contenir que deux valeurs : true ou false.
+`char  lettre = 'Z';`
+
+**Le type boolean**
+
+Le type **boolean** est utilisé pour représenter des valeurs logiques.
+Il ne peut contenir que deux valeurs : **true** ou **false**.
 
 Ce type est très utile pour gérer des conditions ou des états.
+
 `boolean uneReine =true; `
+
 `boolean uneParesseuse =false; `
 
 ## Les Opérateurs arithmétiques
+
+
 
 Java permet d’effectuer des calculs grâce à des opérateurs mathématiques courants.
 
