@@ -41,15 +41,25 @@ La ligne suivante définit une classe appelée **Meteo** :
 En Java, chaque ligne de code exécutable doit se trouver à **l’intérieur d’une classe.**
 Une classe s’ouvre et se ferme avec des accolades { }.
 
-Le point d’entrée de tout programme Java est la méthode main :
-`public static void main ( String[]args ){ Systeme.out.println( "Salut");}`
+Le point d’entrée de tout programme Java est la méthode main : 
+```Java
+
+public static void main ( String[]args ){ 
+Systeme.out.println( "Salut");
+}```
+
 La méthode main fonctionne comme une classe : elle s’ouvre et se ferme aussi avec des accolades.
 Elle contient le code qui sera exécuté lorsque le programme démarre.
+
 Dans cet exemple, l’instruction println sera exécutée, ce qui affichera **Salut** à l’écran.
+
 
 **Excercice pratique: Debug & fix** la consigne ici [INSTRUCTION](INSTRUCTION.md/)
 
+
 ## Les variables
+
+
 
 #### Les variables en programmation
 
