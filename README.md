@@ -1,6 +1,7 @@
+
 # Apprentisage Java - Débutante
 
-Ce dépot regroupe mes exercices pratiquues , mes notes et mes projet en Java
+Ce dépot regroupe mes leçons , exercices pratiquues et mes projet en Java
 Objectif: progresser étape par étapeavec des exercice concrets .
 
 ## Sommaire
