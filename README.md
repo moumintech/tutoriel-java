@@ -34,10 +34,11 @@ Java est également sensible à la casse : Main, main et MAIN sont considérés 
 
 **Excercice pratique**[INSTRUCTION](INSTRUCTION.md/)
 
-**_La structure des programmes Java_** :
+### La structure des programmes Java :
+
 La ligne suivante définit une classe appelée **Meteo** :
 `class Meteo{ } `
-En Java, chaque ligne de code exécutable doit se trouver à \*\*l’intérieur d’une classe.\*\*
+En Java, chaque ligne de code exécutable doit se trouver à **l’intérieur d’une classe.**
 Une classe s’ouvre et se ferme avec des accolades { }.
 
 Le point d’entrée de tout programme Java est la méthode main :
