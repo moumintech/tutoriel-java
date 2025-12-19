@@ -285,6 +285,7 @@ Résultat affiché : `3`
 
 ### Concaténation de chaînes de caractères
 
+
 En Java, l’opérateur `+` permet aussi d’assembler des **chaînes de caractères** (String).
 Ce processus s’appelle la **concaténation**.
 
@@ -303,12 +304,14 @@ Voici une **leçon améliorée, claire et bien structurée** sur les **commentai
 
 ## Les commentaires
 
+
+
 ### Qu’est-ce qu’un commentaire ?
 
 Les commentaires sont des **annotations écrites dans le code** pour expliquer ce que fait le programme.
 
 Le **code** est destiné à l’ordinateur.
-Les **commentaires** sont destinés aux humains (développeurs, enseignants, collègues, ou vous-même plus tard).
+Les **commentaires** sont destinés aux humains .
 
 Les commentaires **ne sont jamais exécutés** par le programme.
 
