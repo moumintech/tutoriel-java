@@ -356,19 +356,20 @@ Le code est conservé mais **non exécuté**.
 
 ## Les entrées utilisateur
 
-### Introduction : qu’est-ce qu’une entrée utilisateur ?
+### Qu’est-ce qu’une entrée utilisateur ?
 
 Certains programmes ont besoin de **données fournies par l’utilisateur** pour fonctionner.
 
 Exemples :
 
-- Un **jeu** peut demander un surnom (pseudo) au joueur.
+- Un **jeu** peut demander un pseudo au joueur.
 - Un **convertisseur** peut demander une valeur à convertir (euros → dollars).
 - Un **programme de calcul** peut demander deux nombres.
 
 Pour cela, Java permet de lire ce que l’utilisateur tape au clavier : on parle **d’entrée utilisateur**.
 
 ### La classe Scanner
+
 
 En Java, l’une des façons les plus courantes de récupérer une entrée utilisateur est d’utiliser la **classe `Scanner`**.
 
@@ -380,7 +381,9 @@ import java.util.Scanner;
 
 Cette ligne doit toujours être placée **en haut du fichier**, avant la déclaration de la classe.
 
+
 ### Création d’un objet Scanner
+
 
 Après l’importation, on doit créer un **objet Scanner** pour lire les données entrées au clavier.
 
@@ -427,6 +430,7 @@ Ici :
 
 ### Lire une entrée de type entier (int)
 
+
 Pour lire un nombre entier, on utilise :
 
 ```java
@@ -450,6 +454,7 @@ Un **même objet Scanner** peut être utilisé pour lire plusieurs valeurs.
 
 #### Exemple : nom + âge
 
+
 ```java
 import java.util.Scanner;
 
@@ -472,7 +477,10 @@ public class Main {
 
 ## Les structures conditionnelles
 
-### Introduction : la prise de décision en programmation
+
+
+### La prise de décision en programmation
+
 
 En programmation, les **instructions conditionnelles** permettent à un programme de **prendre des décisions** et d’exécuter des actions différentes **selon une condition**.
 
