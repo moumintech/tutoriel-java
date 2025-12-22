@@ -598,6 +598,7 @@ C’est souvent **préférable aux if imbriqués**.
 #### Syntaxe
 
 ```java
+
 if (condition1) {
     // code
 } else if (condition2) {
@@ -605,6 +606,7 @@ if (condition1) {
 } else {
     // code par défaut
 }
+
 ```
 
 ### Exemple clair avec `if / else if / else`
@@ -640,7 +642,7 @@ System.out.println("Total à payer : " + total + " €");
 
 ### L’instruction conditionnelle switch
 
-### Introduction
+
 
 Dans certains programmes, il est nécessaire de **tester une même variable contre plusieurs valeurs possibles**.
 
@@ -814,7 +816,7 @@ Utilise `switch` quand :
 
 ## Les conditions multiples
 
-### Introduction
+
 
 Dans certains cas, une **seule condition n’est pas suffisante**.
 On a souvent besoin de **combiner plusieurs conditions** pour prendre une décision.
@@ -835,7 +837,10 @@ Pour cela, Java fournit des **opérateurs logiques**.
 | `         |           | `                                         | OR (OU) | Au moins une condition doit être vraie |
 | `!`       | NOT (NON) | Inverse la condition                      |         |                                        |
 
+
 ### L’opérateur AND (`&&`)
+
+
 
 L’opérateur **ET** vérifie si **toutes les conditions sont vraies**.
 
@@ -902,7 +907,7 @@ if ((age >= 18 && age <= 65) && permis) {
 
 ## Les structures itératives (boucle)
 
-### Introduction aux boucles
+
 
 Les **boucles** permettent de **répéter un bloc de code plusieurs fois** tant qu’une condition est vraie.
 
