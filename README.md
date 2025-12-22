@@ -17,7 +17,7 @@ Objectif : progresser étape par étape avec des exercice concrets .
 
 - [Les entrées utilisateur](#Les-entrées-utilisateurs)
 - [Les structures conditionnelles](#Les-structures-conditionnelles)
-- [Les structures conditionnelles itéraction](#Les-structures-conditionnelles-iteraction)
+- [Les structures conditionnelles itéraction](#Les-structures-conditionnelles-itéraction)
 - [Les tableaux](#Les-tableaux)
 
 
