@@ -938,6 +938,16 @@ while (x > 0) {
     System.out.println(x);
     x = x - 1;
 }
+/*
+résultat
+   5
+   4
+   3
+   2
+   1
+*/
+   
+
 ```
 
 La ligne `x = x - 1` est **essentielle**.
@@ -983,6 +993,14 @@ while (x <= 10) {
     System.out.println(x);
     x += 2;
 }
+/*
+0
+2
+4
+6
+8
+10
+*/
 ```
 
 ### Exemple : calculer la somme de 1 à 100
@@ -997,6 +1015,8 @@ while (num <= 100) {
 }
 
 System.out.println("La somme est : " + somme);
+
+//Lasomme est : 5050
 ```
 
 La dernière instruction `print` est **en dehors** de la boucle.
@@ -1038,9 +1058,7 @@ Même si la condition est fausse, le code s’exécute **une fois**.
 | Condition testée avant    | Condition testée après      |
 | Peut ne jamais s’exécuter | S’exécute au moins une fois |
 
-# La boucle `for` en Java
-
-## Introduction à la boucle `for`
+## La boucle `for` en Java
 
 La boucle `for` est un **autre type de boucle** en Java.
 Elle est très utilisée lorsque l’on **connaît à l’avance le nombre de répétitions**.
@@ -1232,7 +1250,7 @@ Les nombres pairs sont ignorés.
 
 ## Les tableaux
 
-## Introduction : pourquoi utiliser des tableaux ?
+## Pourquoi utiliser des tableaux ?
 
 Imagine un programme qui doit stocker **l’âge de 10 utilisateurs**.
 
