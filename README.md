@@ -6,11 +6,12 @@ Objectif : progresser étape par étape avec des exercice concrets .
 
 ## Sommaire
 
+
 ## Java fondamentale
 
-- [Decouvrir Java](#Decouvrir-Java)
+- [Découvrir Java](#Découvrir-Java)
   - [Comment fonctionne un programme Java](#Comment-fonctionne-un-programme-Java)
-  - [Difference Java vs JavaScript ](#Difference-Java-vs-JavaScript)
+  - [Différence Java vs JavaScript ](#Différence-Java-vs-JavaScript)
   - [Compilation vs Interprétation](#Compilation-vs-Interprétation)
   - [Installer Java et un IDE](#Installer-Java-et-un-IDE)
     
@@ -34,11 +35,31 @@ Objectif : progresser étape par étape avec des exercice concrets .
 
 
 ## Logique et contrôle  du programme
-- [Les entrées utilisateur](#Les-entrées-utilisateurs)
-- [Les structures conditionnelles](#Les-structures-conditionnelles)
-- [Les structures conditionnelles itéraction](#Les-structures-conditionnelles-itéraction)
-- [Les tableaux](#Les-tableaux)
 
+- [Les structures conditionnelles en Java](#Les-structures-conditionnelles-en-Java)
+  - [L'instruction if](#L'-instruction-if)
+  - [L'instruction if ... else](#L'instruction-if-...-else)
+  - [Tester plusieurs cas avec else if](#Tester-plusieurs-cas-avec-else-if)
+  - [L'instruction switch](#L'instruction-switch)
+    
+- [Les boucles en Java ](#Les-boucles-en-Java)
+  - [La boucle while](#La-boucle-while)
+  - [La boucle do while](#La-boucle-do-while)
+  - [Différence entre while et do while](#Différence-entre-while-et-do-while)
+  - [La boucle for ](#La-boucle-for)
+  - [Comparaison while vs for](#Comparaison-while-vs-for)
+  - [Le contrôle de boucle : break](#Le-contrôle-de-boucle-:-break)
+  - [Le contrôle de boucle : continue](#Le-contrôle-de-boucle-:-continue)
+   
+- [Les tableaux en Java](#Les-tableaux-en-Java)
+  - [Parcours un tableau avec for](#Parcours-un-tableau-avec-for)
+  - [Parcours un tableau avec for-each](#Parcours-un-tableau-avec-for-each)
+  - [Les tableaux à deux dimensions(2D)](#Les-tableaux-à-deux-dimensions(2D))
+
+
+
+
+   
 
 
 ## Decouvrir Java
