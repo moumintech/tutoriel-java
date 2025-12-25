@@ -6,17 +6,32 @@ Objectif : progresser étape par étape avec des exercice concrets .
 
 ## Sommaire
 
-## Concepts de base
+## Java fondamentale
 
-- [Introduction](#introduction)
-  - [Comment fonctionne un programme Java](##Comment-fonctionne-un-programme-Java)
-  - [Java vs JavaScript](#Java-vs-JavaScript)
+- [Decouvrir Java](#Decouvrir-Java)
+  - [Comment fonctionne un programme Java](#Comment-fonctionne-un-programme-Java)
+  - [Difference Java vs JavaScript ](#Difference-Java-vs-JavaScript)
   - [Compilation vs Interprétation](#Compilation-vs-Interprétation)
   - [Installer Java et un IDE](#Installer-Java-et-un-IDE)
+    
 - [La structure des programmes Java](#La-structure-des-programmes-Java)
-- [Les variables](#les-variables)
-- [Les opérateurs arithmétiques](#Les-Opérateurs-arithmétiques)
-- [Les commentaires](#Les-commentaires)
+  - [La classe](#La-classe)
+  - [La methode main](#La-methode-main)
+  - [Afficher un message](#Afficher-un-message)
+  - [Les Commentaires](#Les-commentaire)
+  - [Les conventions de nommage en Java](#Les-conventions-de-nommage-en-Java)
+    
+- [Les variables et les types en Java ](#Les-variables-et-les-types-en-Java)
+  - [Les types primitifs](#Les-types-primitifs)
+  - [Le type String](#Le-type-String)
+  - [La constante final](#La-constante-final)
+  - [Convertioon-de-type](#La-constante-final)
+    
+- [Les opérateurs en Java](#Les-opérateurs-en Java)
+  - [Les opérateurs arithmétiques](#Les-opérateurs-arithmétiques)
+  - [Les opérateurs de comparaison](#Les opérateurs-de-comparaison)
+  - [Les opérateurs de logiques](#Les-opérateurs-de-comparaison)
+
 
 ## Logique et exécution du programme
 
@@ -27,7 +42,7 @@ Objectif : progresser étape par étape avec des exercice concrets .
 
 
 
-## Introduction
+## Decouvrir Java
 
 Java est un **langage de programmation** utilisé pour créer des logiciels capables de fonctionner sur différents types de machines et de systèmes d’exploitation (Windows, Linux, macOS, etc.).
 
@@ -130,7 +145,7 @@ System.out.println("Bonjour Java !");
 * **JDK** : permet de développer des applications Java
 
 
-##  Java vs JavaScript 
+##  Différence Java vs JavaScript 
 
 Même si leurs noms se ressemblent, **Java et JavaScript n’ont aucun lien technique**.
 
@@ -150,13 +165,13 @@ La confusion vient uniquement du nom.
 
 
 
-##  Compilation vs Interprétation 
+###  Compilation vs Interprétation 
 
 Un programme doit être **traduit** pour être compris par l’ordinateur.
 Il existe deux approches principales.
 
 
-### Compilation
+#### Compilation
 
 * Le code est **traduit avant l’exécution**
 * Les erreurs sont détectées plus tôt
@@ -166,7 +181,7 @@ Java utilise **une compilation en bytecode**, puis une exécution.
 
 
 
-### Interprétation
+#### Interprétation
 
 * Le code est **exécuté directement**
 * Les erreurs apparaissent à l’exécution
@@ -273,7 +288,7 @@ Bon choix académique et professionnel
 
 **Excercice pratique [INSTRUCTION](INSTRUCTION.md/)**
 
-## La structure des programmes Java :
+## La structure des programmes Java 
 
 
 ### La classe
@@ -701,68 +716,10 @@ boolean estConnecte = false;
 System.out.println(!estConnecte); // true
 ```
 
-
-
-
 * Les opérateurs arithmétiques font des calculs (`+`, `-`, `*`, `/`, `%`)
 * Les opérateurs de comparaison comparent des valeurs
 * Les opérateurs logiques combinent des conditions
 * Les comparaisons retournent toujours un `boolean`
-
-
-
- Suite logique possible (toujours courte et cohérente) :
-# Les commentaires
-
-
-
-### Qu’est-ce qu’un commentaire ?
-
-Les commentaires sont des **annotations écrites dans le code** pour expliquer ce que fait le programme.
-
-Le **code** est destiné à l’ordinateur.
-Les **commentaires** sont destinés aux humains .
-
-Les commentaires **ne sont jamais exécutés** par le programme.
-
-### Commentaires sur une seule ligne
-
-Un commentaire sur une ligne commence par **deux barres obliques `//`**.
-Tout ce qui se trouve après `//` sur la même ligne est ignoré par Java.
-
-```java
-// Ceci est un commentaire sur une seule ligne
-int age = 20; // Déclaration de l’âge de l’utilisateur
-```
-
-### Commentaires sur plusieurs lignes
-
-Lorsque vous avez besoin d’écrire un commentaire plus long ou de commenter plusieurs lignes, vous pouvez utiliser :
-
-`/*` pour commencer
-`*/` pour terminer
-
-```java
-/*
-Ceci est un commentaire
-sur plusieurs lignes.
-Il permet d’expliquer
-une partie importante du programme.
-*/
-```
-
-### Commenter temporairement du code
-
-Les commentaires peuvent aussi servir à **désactiver du code temporairement**, par exemple lorsqu’une fonctionnalité est en cours de développement ou en test.
-
-```java
-/*
-int resultat = calculerTotal();
-System.out.println(resultat);
-*/
-```
-
-Le code est conservé mais **non exécuté**.
 
 ## Les entrées utilisateur
 
