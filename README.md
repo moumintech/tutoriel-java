@@ -68,6 +68,11 @@ Objectif : progresser étape par étape avec des exercice concrets .
   - [public](#public)
   - [Les getters](Les-getters)
   - [Les setters](Les-setters)
+    
+- [L'Héritage et le polymorphisme en Java](#L'Héritage-et-le-polymorphisme-en-Java)
+  - [L'héritage extends](#L'héritage-extends)
+  - [Le mot-clé super](#Le-mot-clé-super)
+  - [Rédéfinition de méthodes(@Override)](#Rédéfinition-de-méthodes(@Override))
 
 
    
@@ -1953,4 +1958,178 @@ Chaque objet réagit différemment.
 * `super` appelle le parent
 * `@Override` modifie un comportement
 * Le polymorphisme adapte le comportement selon l’objet
+
+
+
+## L’abstraction en Java
+
+L’**abstraction** consiste à **définir ce qu’un objet doit faire**, sans imposer **comment il le fait**.
+
+ On décrit des **comportements attendus**, et on laisse les classes concrètes fournir l’implémentation.
+
+
+
+### Les classes abstraites
+
+Une **classe abstraite** est une classe :
+
+* qui **ne peut pas être instanciée**
+* qui peut contenir :
+
+  * des méthodes **abstraites** (sans code)
+  * des méthodes **concrètes** (avec code)
+
+#### Déclaration
+
+```java
+abstract class Animal {
+}
+```
+
+
+
+#### Méthode abstraite
+
+Une méthode abstraite :
+
+* n’a **pas de corps**
+* doit être implémentée par les classes enfants
+
+```java
+abstract class Animal {
+    abstract void crier();
+}
+```
+
+
+
+#### Héritage d’une classe abstraite
+
+```java
+class Chien extends Animal {
+    @Override
+    void crier() {
+        System.out.println("Le chien aboie");
+    }
+}
+```
+
+Toute classe qui hérite d’une classe abstraite **doit implémenter toutes ses méthodes abstraites**.
+
+
+
+#### Méthodes concrètes dans une classe abstraite
+
+```java
+abstract class Animal {
+    void dormir() {
+        System.out.println("L'animal dort");
+    }
+
+    abstract void crier();
+}
+```
+
+Le code peut être **partiellement défini**.
+
+
+
+###  Les interfaces
+
+Une **interface** définit un **contrat** :
+
+* ce que la classe **doit faire**
+* sans fournir d’implémentation (par défaut)
+
+### Déclaration
+
+```java
+interface Volant {
+    void voler();
+}
+```
+
+Une interface :
+
+* ne contient que des méthodes abstraites (par défaut)
+* ne contient **pas d’attributs d’instance**
+* ne possède **pas de constructeur**
+
+
+
+### Implémenter une interface : `implements`
+
+Une classe utilise le mot-clé `implements` pour appliquer une interface.
+
+```java
+class Avion implements Volant {
+    @Override
+    public void voler() {
+        System.out.println("L'avion vole");
+    }
+}
+```
+
+La classe **s’engage à implémenter toutes les méthodes** de l’interface.
+
+
+
+### Une classe peut implémenter plusieurs interfaces
+
+Contrairement à l’héritage de classes, Java autorise **plusieurs interfaces**.
+
+```java
+interface Volant {
+    void voler();
+}
+
+interface Nageant {
+    void nager();
+}
+
+class Canard implements Volant, Nageant {
+    @Override
+    public void voler() {
+        System.out.println("Le canard vole");
+    }
+
+    @Override
+    public void nager() {
+        System.out.println("Le canard nage");
+    }
+}
+```
+
+
+### Classe abstraite vs Interface
+
+| Classe abstraite         | Interface               |
+| ------------------------ | ----------------------- |
+| `extends`                | `implements`            |
+| Peut contenir du code    | Pas de code métier      |
+| Héritage simple          | Implémentation multiple |
+| Peut avoir des attributs | Pas d’état              |
+
+ **Classe abstraite** → partage de code
+ **Interface** → contrat de comportement
+
+
+
+### L’abstraction et le polymorphisme
+
+```java
+Volant v = new Avion();
+v.voler();
+```
+
+ On manipule l’objet via son **abstraction**, pas sa classe concrète.
+
+
+
+* L’abstraction définit **le quoi**, pas le comment
+* `abstract` → classe partiellement définie
+* Méthode abstraite → sans implémentation
+* `interface` → contrat
+* `implements` → engagement à respecter le contrat
+* Une classe peut implémenter **plusieurs interfaces**
 
