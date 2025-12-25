@@ -75,7 +75,10 @@ Objectif : progresser étape par étape avec des exercice concrets .
   - [Rédéfinition de méthodes(@Override)](#Rédéfinition-de-méthodes(@Override))
 
 
-   
+- [L'abstration en Java](#L'abstration-en-Java)
+- [Les classes abstraites](#Les-classes-abstraites)
+- [Les Interfaces](#Les-Interfaces)
+- [Implémenter une interface : implements](Implémenter-une-interface-:-implements)
 
 
 ## Decouvrir Java
@@ -2132,4 +2135,179 @@ v.voler();
 * `interface` → contrat
 * `implements` → engagement à respecter le contrat
 * Une classe peut implémenter **plusieurs interfaces**
+
+
+
+## Les collections en Java
+
+Les **collections** permettent de stocker et manipuler **des groupes d’objets** de manière flexible.
+Contrairement aux tableaux, leur taille peut **changer dynamiquement**.
+
+
+
+### Les trois grandes familles de collections
+
+Java distingue **trois types principaux** de collections.
+
+#### Liste (`List`)
+
+* éléments **ordonnés**
+* **doublons autorisés**
+* accès par index
+
+ Exemple : une liste de notes
+
+
+
+#### Ensemble (`Set`)
+
+* **pas de doublons**
+* pas d’accès par index
+* ordre non garanti (selon l’implémentation)
+
+ Exemple : des emails uniques
+
+
+#### Dictionnaire (`Map`)
+
+* fonctionne avec des **paires clé / valeur**
+* clés **uniques**
+* accès par clé
+
+Exemple : `id → utilisateur`
+
+
+
+### `ArrayList` (implémentation de List)
+
+`ArrayList` est une liste dynamique.
+
+#### Création
+
+```java
+ArrayList<String> noms = new ArrayList<>();
+```
+
+#### Ajouter des éléments
+
+```java
+noms.add("Alice");
+noms.add("Bob");
+noms.add("Alice"); // autorisé
+```
+
+#### Accéder à un élément
+
+```java
+System.out.println(noms.get(0));
+```
+
+#### Taille
+
+```java
+System.out.println(noms.size());
+```
+
+ `ArrayList` est idéale quand :
+
+* l’ordre est important
+* les doublons sont autorisés
+
+
+
+### `HashSet` (implémentation de Set)
+
+`HashSet` stocke des éléments **sans doublons**.
+
+#### Création
+
+```java
+HashSet<String> emails = new HashSet<>();
+```
+
+#### Ajouter des éléments
+
+```java
+emails.add("a@mail.com");
+emails.add("b@mail.com");
+emails.add("a@mail.com"); // ignoré
+```
+
+Les doublons sont automatiquement refusés.
+
+
+
+### `HashMap` (implémentation de Map)
+
+`HashMap` associe une **clé** à une **valeur**.
+
+#### Création
+
+```java
+HashMap<Integer, String> utilisateurs = new HashMap<>();
+```
+
+#### Ajouter des paires
+
+```java
+utilisateurs.put(1, "Alice");
+utilisateurs.put(2, "Bob");
+```
+
+#### Accéder à une valeur
+
+```java
+System.out.println(utilisateurs.get(1));
+```
+
+Chaque clé est **unique**.
+
+
+
+### Parcourir une collection avec `Iterator`
+
+Un **Iterator** permet de parcourir une collection **sans index**.
+
+##### Exemple avec `ArrayList`
+
+```java
+ArrayList<String> noms = new ArrayList<>();
+noms.add("Alice");
+noms.add("Bob");
+
+Iterator<String> it = noms.iterator();
+
+while (it.hasNext()) {
+    System.out.println(it.next());
+}
+```
+
+`Iterator` est souvent utilisé avec les `Set`.
+
+
+
+### Comparaison List / Set / Map
+
+| Type | Doublons     | Ordre       | Accès   |
+| ---- | ------------ | ----------- | ------- |
+| List | Oui          | Oui         | index   |
+| Set  | Non          | Non garanti | élément |
+| Map  | Clés uniques | Non garanti | clé     |
+
+---
+
+### Quand utiliser quoi ?
+
+* **ArrayList** → liste ordonnée avec doublons
+* **HashSet** → éléments uniques
+* **HashMap** → association clé / valeur
+* **Iterator** → parcours sécurisé
+
+
+
+* Les collections sont dynamiques
+* `ArrayList` → liste
+* `HashSet` → ensemble sans doublons
+* `HashMap` → clé / valeur
+* `Iterator` → parcours générique
 
