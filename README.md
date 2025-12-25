@@ -9,10 +9,11 @@ Objectif : progresser étape par étape avec des exercice concrets .
 ## Concepts de base
 
 - [Introduction](#introduction)
-- [Comment fonctionne un programme Java](##Comment-fonctionne-un-programme-Java)
-- [ Java vs JavaScript ](##Java-vs-JavaScript)
-- [Compilation vs Interprétation](##Compilation-vs-Interprétation)
-- [Installer Java et un IDE](##Installer-Java-et-un-IDE)
+  - [Comment fonctionne un programme Java](##Comment-fonctionne-un-programme-Java)
+  - [Java vs JavaScript](#Java-vs-JavaScript)
+  - [Compilation vs Interprétation](#Compilation-vs-Interprétation)
+  - [Installer Java et un IDE](#Installer-Java-et-un-IDE)
+- [La structure des programmes Java](#La-structure-des-programmes-Java)
 - [Les variables](#les-variables)
 - [Les opérateurs arithmétiques](#Les-Opérateurs-arithmétiques)
 - [Les commentaires](#Les-commentaires)
@@ -272,121 +273,167 @@ Bon choix académique et professionnel
 
 **Excercice pratique [INSTRUCTION](INSTRUCTION.md/)**
 
-### La structure des programmes Java :
+## La structure des programmes Java :
 
-La ligne suivante définit une classe appelée **Meteo** :
-`class Meteo{ } `
 
-En Java, chaque ligne de code exécutable doit se trouver à **l’intérieur d’une classe.**
-Une classe s’ouvre et se ferme avec des accolades **{ }**.
+### La classe
 
-Le point d’entrée de tout programme en Java est la méthode **main** : 
-```Java
+En Java, **tout programme commence par une classe**.
 
-public static void main ( String[]args ){ 
-Systeme.out.println( "Salut");
+```java
+class Meteo {
 }
-
 ```
 
-La méthode main fonctionne comme une **classe** : elle s’ouvre et se ferme aussi avec des accolades.
-Elle contient le code qui sera exécuté lorsque le programme démarre.
+* `class` permet de définir une classe
+* `Meteo` est le nom de la classe
+* les accolades `{ }` délimitent son contenu
 
-Dans cet exemple, l’instruction println sera exécutée, ce qui affichera **Salut** à l’écran.
+ **Toute ligne de code exécutable en Java doit se trouver à l’intérieur d’une classe.**
+
+
+### La méthode `main`
+
+La méthode `main` est le **point d’entrée du programme**.
+C’est la première méthode exécutée lorsque le programme démarre.
+
+```java
+public static void main(String[] args) {
+}
+```
+
+* `public` : la méthode est accessible
+* `static` : elle peut être exécutée sans créer d’objet
+* `void` : elle ne retourne aucune valeur
+* `main` : nom spécial reconnu par Java
+* `String[] args` : paramètres passés au programme
+
+Sans méthode `main`, un programme Java **ne peut pas s’exécuter**.
+
+
+###  Afficher un message à l’écran
+
+Pour afficher un texte dans la console, on utilise :
+
+```java
+System.out.println("Salut");
+```
+
+* `System.out` : sortie standard (console)
+* `println` : affiche le texte et passe à la ligne suivante
+
+ Cette instruction est exécutée **lorsque le programme démarre**, car elle se trouve dans `main`.
+
+
+
+### Les commentaires
+
+Les commentaires servent à **expliquer le code**.
+Ils ne sont **jamais exécutés**.
+
+#### Commentaire sur une ligne
+
+```java
+// Ceci est un commentaire
+```
+
+#### Commentaire sur plusieurs lignes
+
+```java
+/*
+Ceci est
+un commentaire
+sur plusieurs lignes
+*/
+```
+
+ Les commentaires améliorent la lisibilité du code.
+
+
+
+###  Les conventions de nommage en Java
+
+Java suit des conventions strictes pour améliorer la clarté du code.
+
+* **Classes** :
+
+  * commencent par une majuscule
+  * exemple : `Meteo`, `Application`, `Utilisateur`
+
+* **Méthodes et variables** :
+
+  * commencent par une minuscule
+  * utilisent le *camelCase*
+  * exemple : `main`, `temperatureActuelle`
+
+Respecter ces conventions est une **bonne pratique essentielle** en Java.
+
+
+### Exemple 
+
+```java
+class Meteo {
+
+    public static void main(String[] args) {
+        System.out.println("Salut");
+    }
+
+}
+```
+
+Lors de l’exécution, le message **Salut** s’affiche à l’écran.
+
+
+
+* Une **classe** contient le programme
+* `main` est le point de départ
+* `System.out.println()` affiche un message
+* Les commentaires expliquent le code
+* Les conventions de nommage rendent le code lisible
+
 
 
 **Excercice pratique: Debug & fix la consigne ici  [INSTRUCTION](INSTRUCTION.md/)**
 
 
-## Les variables
+
+
+## Variables et types en Java
+
+Dans un programme, on manipule constamment des **valeurs** : nombres, texte, états logiques, etc.
+Une **variable** permet de **stocker une valeur** en lui donnant un nom afin de la réutiliser plus tard dans le programme.
 
 
 
+### Déclarer une variable
 
-Dans un programme, nous travaillons constamment avec des valeurs : du texte, des nombres, des données diverses.
-Une variable sert à stocker une valeur en lui attribuant un nom. Ce nom permet ensuite de réutiliser la valeur plus tard dans le programme.
+En Java, une variable est toujours définie avec un **type**.
 
-Exemple : dans un jeu vidéo, on peut créer une variable pour stocker le nombre de points du joueur
-Le type d’une variable
+```java
+int points = 10;
+```
 
-Chaque variable possède un **type**, c’est-à-dire la catégorie de valeur qu’elle peut contenir :
+* `int` → type de la variable
+* `points` → nom de la variable
+* `10` → valeur stockée
 
-- du texte (**String**)
+Une variable peut être modifiée au cours du programme.
 
-- un nombre entier (**int**)
+### Les types primitifs
 
-- un nombre décimal (**double**)
+Les types primitifs représentent des valeurs simples.
 
-- etc.
+### `int` — nombre entier
 
-Pour le texte, on utilise les **guillemets**. Le texte écrit entre guillemets est appelé une String.
+```java
+int age = 25;
+```
 
-#### Créer une variable de type String
+#### `double` — nombre décimal
 
-Pour déclarer une variable, on indique d’abord son type, puis son nom :
-`String nom;` 
-Ici, on'a crée une variable appelée **name**de type **String**.
-
-**Important** : En Java, **String** commence toujours par une **majuscule**.
-string en minuscules provoquera une erreur.
-
-#### Attribuer une valeur à une variable
-
-Après avoir déclaré la variable, on peut lui donner une valeur grâce à l’opérateur d’affectation = :
-
-`nom = Zam `
-
-À présent, la variable **name**
-contient la valeur "Zam".
-
-On peut aussi déclarer et affecter en une seule ligne :
-`String nom = "Zam"; `
-
-#### Modifier la valeur d’une variable
-
-
-Une variable peut changer de valeur au cours du programme :
-
-`String nom = "Zam"; nom= "Moumin ;`
-
-À la fin, **name** contient **"Moumin"**.
-Si l’on affiche la variable :
-
-`System.out.println(name);`
-
-Le programme affichera :
-
-`Moumin`
-
-
-**Exercice pratique : Stocker le titre d'un film trouver la consigne ici [INSTRUCTION](INSTRUCTION.md/)**
-
-
-**Les types de variables en Java**
-
-En Java, il existe plusieurs d'autres types de données que l’on peut utiliser pour déclarer des variables.
-Chaque type sert à stocker un genre précis de valeur.
-
-**_Le type int_**
-
-Le type **int** est utilisé pour stocker des nombres entiers (sans décimales), appelés **integers**en programmation.
-`int prix = 5;` .
-
-**Les types pour les nombres décimaux** .
-
-**Le type _double_** 
-
-Pour travailler avec des nombres décimaux, on utilise généralement le type **double**.
-
-`double prix = 5.5;`
-
-**Le type _float_**
-
-Il existe aussi le type float, qui permet également de stocker des nombres décimaux.
-Lorsqu’on utilise un float, il est obligatoire d’ajouter le suffixe f à la valeur.
-
-`float prix = 5.5f;`
-
+```java
+double temperature = 18.5;
+```
 **Différence entre float et double**
 
 **float** :
@@ -411,135 +458,261 @@ Utilisez float lorsque la mémoire est critique.
 
 Utilisez double pour des calculs précis, par exemple pour des devises ou des calculs financiers.
 
-**Le type char**
+#### `boolean` — vrai ou faux
 
-Le type char permet de stocker un seul caractère.
+```java
+boolean estConnecte = true;
+```
 
-Contrairement au type String, il utilise des guillemets simples
+#### `char` — un seul caractère
 
-`char  lettre = 'Z';`
+```java
+char initiale = 'A';
+```
 
-**Le type boolean**
-
-Le type **boolean** est utilisé pour représenter des valeurs logiques.
-Il ne peut contenir que deux valeurs : **true** ou **false**.
-
-Ce type est très utile pour gérer des conditions ou des états.
-
-`boolean uneReine =true; `
-
-`boolean uneParesseuse =false; `
-
-## Les Opérateurs arithmétiques
+ Un `char` utilise des **apostrophes simples** (`' '`).
 
 
+### Le type `String` (texte)
 
-Java permet d’effectuer des calculs grâce à des opérateurs mathématiques courants.
+Le type `String` permet de stocker du texte.
+
+```java
+String prenom = "Zam";
+```
+
+* Le texte est entouré de **guillemets doubles** (`" "`)
+* `String` n’est **pas un type primitif**, mais il est utilisé très fréquemment
+
+
+
+### La constante `final`
+
+Une variable déclarée avec `final` **ne peut plus être modifiée**.
+
+```java
+final int ANNEE = 2025;
+```
+
+ Une constante :
+
+* est souvent écrite en **MAJUSCULES**
+* protège une valeur fixe du programme
+
+
+
+### Conversions de type (casting)
+
+Parfois, il est nécessaire de **convertir un type vers un autre**.
+
+#### Conversion automatique (implicite)
+
+```java
+int x = 10;
+double y = x; // int → double
+```
+
+ Aucun risque de perte de données.
+
+
+
+##### Conversion forcée (casting explicite)
+
+```java
+double a = 9.7;
+int b = (int) a;
+```
+
+* La partie décimale est **perdue**
+* `b` vaudra `9`
+
+Le casting explicite peut entraîner une perte de précision.
+
+
+### Exemple 
+
+```java
+int score = 100;
+double moyenne = 14.5;
+boolean gagne = true;
+char niveau = 'A';
+String message = "Bravo";
+
+final int MAX_SCORE = 200;
+
+int valeur = (int) moyenne;
+
+System.out.println(message);
+```
+
+
+
+* Une variable stocke une valeur
+* Chaque variable a un type
+* Types primitifs : `int`, `double`, `boolean`, `char`
+* Texte : `String`
+* `final` crée une constante
+* Le casting permet de convertir des types
+
+
+
+**Exercice pratique : Stocker le titre d'un film trouver la consigne ici [INSTRUCTION](INSTRUCTION.md/)**
+
+
+
+# Les opérateurs en Java
+
+Les opérateurs permettent de **manipuler des valeurs** : faire des calculs, comparer des données ou combiner des conditions.
+
+On distingue principalement :
+
+* les **opérateurs arithmétiques**
+* les **opérateurs de comparaison**
+* les **opérateurs logiques**
+
+
+
+## Les opérateurs arithmétiques
+
+Ils servent à effectuer des calculs mathématiques.
 
 ### Addition (`+`)
-
-L’opérateur `+` permet d’additionner deux valeurs.
 
 ```java
 int x = 5;
 int y = 3;
-System.out.println(x + y);
+System.out.println(x + y); // 8
 ```
 
-Résultat affiché : `8`
-
-Vous pouvez aussi stocker le résultat dans une variable :
-
-```java
-double prix1 = 24.99;
-double prix2 = 19.45;
-double somme = prix1 + prix2;
-System.out.println(somme);
-```
-
-Résultat affiché : `44.44`
+---
 
 ### Soustraction (`-`)
-
-L’opérateur `-` permet de soustraire une valeur à une autre.
 
 ```java
 int salaire = 9000;
 int taxe = 500;
-int resultat = salaire - taxe;
-System.out.println(resultat);
+System.out.println(salaire - taxe); // 8500
 ```
 
-Résultat affiché : `8500`
+---
 
 ### Multiplication (`*`)
 
-L’astérisque `*` permet de multiplier deux valeurs.
-
-Exemple : calculer 20 % d’un prix.
-
 ```java
 int prix = 1200;
-System.out.println(prix * 0.2);
+System.out.println(prix * 0.2); // 240.0
 ```
 
-Résultat affiché : `240.0`
+ Lorsqu’un calcul implique un `double`, le résultat est un `double`.
+
 
 ### Division (`/`)
-
-L’opérateur `/` permet de diviser une valeur par une autre.
 
 ```java
 int montant = 9000;
 int prix = 49;
-int resultat = montant / prix;
-System.out.println(resultat);
+System.out.println(montant / prix); // 183
 ```
 
-Résultat affiché : `183`
+ Avec des `int`, la division **supprime la partie décimale**.
 
-Avec des `int`, le résultat est un **nombre entier**.
-Pour obtenir un résultat avec des décimales, utilisez `double` :
+Pour un résultat précis :
 
 ```java
 double resultat = (double) montant / prix;
 System.out.println(resultat);
 ```
 
+
+
 ### Modulo (`%`)
 
-L’opérateur modulo `%` permet d’obtenir le **reste d’une division**.
-
-Exemple : combien d’articles restent si on les range par boîtes de 5 ?
+L’opérateur `%` retourne le **reste de la division**.
 
 ```java
 int items = 23;
-int reste = items % 5;
-System.out.println(reste);
+System.out.println(items % 5); // 3
 ```
 
-Résultat affiché : `3`
-
-### Concaténation de chaînes de caractères
 
 
-En Java, l’opérateur `+` permet aussi d’assembler des **chaînes de caractères** (String).
-Ce processus s’appelle la **concaténation**.
+### Concaténation de chaînes (`+`)
+
+L’opérateur `+` permet aussi d’assembler des chaînes de caractères.
 
 ```java
 String nom = "John";
-String prenon = "Doe";
-String nomComplet = nom + " " + prenom;
-System.out.println(nomComplet);
+String prenom = "Doe";
+System.out.println(nom + " " + prenom);
 ```
 
-Résultat affiché : `John Doe`
 
-Voici une **leçon améliorée, claire et bien structurée** sur les **commentaires en Java**, avec des ajouts utiles et des exemples corrigés.
+##  Les opérateurs de comparaison
 
-**Excercice pratique: Calculs dans un stand de barbe à papa ** la consigne ici [INSTRUCTION](INSTRUCTION.md/)
+Ils permettent de **comparer deux valeurs**.
+Le résultat est toujours un `boolean` (`true` ou `false`).
 
-## Les commentaires
+| Opérateur | Signification     |
+| --------- | ----------------- |
+| `==`      | égal à            |
+| `!=`      | différent de      |
+| `>`       | supérieur à       |
+| `<`       | inférieur à       |
+| `>=`      | supérieur ou égal |
+| `<=`      | inférieur ou égal |
+
+Exemple :
+
+```java
+int age = 20;
+System.out.println(age >= 18); // true
+```
+
+
+##  Les opérateurs logiques
+
+Ils servent à **combiner plusieurs conditions**.
+
+| Opérateur | Signification |   |    |
+| --------- | ------------- | - | -- |
+| `&&`      | ET            |   |    |
+| `         |               | ` | OU |
+| `!`       | NON           |   |    |
+
+### Exemple avec `&&` (ET)
+
+```java
+int age = 20;
+boolean permis = true;
+
+System.out.println(age >= 18 && permis); // true
+```
+
+### Exemple avec `||` (OU)
+
+```java
+System.out.println(age < 18 || permis); // true
+```
+
+### Exemple avec `!` (NON)
+
+```java
+boolean estConnecte = false;
+System.out.println(!estConnecte); // true
+```
+
+
+
+
+* Les opérateurs arithmétiques font des calculs (`+`, `-`, `*`, `/`, `%`)
+* Les opérateurs de comparaison comparent des valeurs
+* Les opérateurs logiques combinent des conditions
+* Les comparaisons retournent toujours un `boolean`
+
+
+
+ Suite logique possible (toujours courte et cohérente) :
+# Les commentaires
 
 
 
