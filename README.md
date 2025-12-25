@@ -27,9 +27,9 @@ Objectif : progresser étape par étape avec des exercice concrets .
   - [La constante final](#La-constante-final)
   - [Convertioon-de-type](#La-constante-final)
     
-- [Les opérateurs en Java](#Les-opérateurs-en Java)
+- [Les opérateurs en Java](#Les-opérateurs-en-Java)
   - [Les opérateurs arithmétiques](#Les-opérateurs-arithmétiques)
-  - [Les opérateurs de comparaison](#Les opérateurs-de-comparaison)
+  - [Les opérateurs de comparaison](#Les-opérateurs-de-comparaison)
   - [Les opérateurs de logiques](#Les-opérateurs-de-comparaison)
 
 
