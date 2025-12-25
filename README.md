@@ -76,9 +76,18 @@ Objectif : progresser étape par étape avec des exercice concrets .
 
 
 - [L'abstration en Java](#L'abstration-en-Java)
-- [Les classes abstraites](#Les-classes-abstraites)
-- [Les Interfaces](#Les-Interfaces)
-- [Implémenter une interface : implements](Implémenter-une-interface-:-implements)
+  - [Les classes abstraites](#Les-classes-abstraites)
+  - [Les Interfaces](#Les-Interfaces)
+  - [Implémenter une interface : implements]#(Implémenter-une-interface-:-implements)
+
+## Structures avancées 
+
+- [Les collections en Java](Les-collections-en-Java)
+  - [ArrayList (implémentation de List)](ArrayList-(implémentation-de-List))
+  - [HashSet(implémentation de Set)](HashSet-(implémentation-de-Set))
+  - [HashMap(implémentation de Map)](HashSet-(implémentation-de-Map))
+  - [Parcourir une collection avec Iterator](Parcourir-une-collection-avec-Iterator)
+  - [Comparaison List/Set/Map](Comparaison-List/Set/Map)
 
 
 ## Decouvrir Java
