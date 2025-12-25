@@ -9,6 +9,10 @@ Objectif : progresser étape par étape avec des exercice concrets .
 ## Concepts de base
 
 - [Introduction](#introduction)
+- [Comment fonctionne un programme Java](##Comment-fonctionne-un-programme-Java)
+- [ Java vs JavaScript ](##Java-vs-JavaScript)
+- [Compilation vs Interprétation](##Compilation-vs-Interprétation)
+- [Installer Java et un IDE](##Installer-Java-et-un-IDE)
 - [Les variables](#les-variables)
 - [Les opérateurs arithmétiques](#Les-Opérateurs-arithmétiques)
 - [Les commentaires](#Les-commentaires)
@@ -24,14 +28,247 @@ Objectif : progresser étape par étape avec des exercice concrets .
 
 ## Introduction
 
-Java est l’un des langages de programmation les plus populaires. Il peut s’exécuter sur différentes plateformes, y compris les ordinateurs, les systèmes embarqués et le mobile. On peut utiliser Java pour développer des applications, des jeux, des logiciels bancaires, des applications web et bien plus encore. Son slogan bien connu est :
-**" Write once, run anywhere! "**
-On genere des sorties avec l'instruction
-`System.out.println()`
+Java est un **langage de programmation** utilisé pour créer des logiciels capables de fonctionner sur différents types de machines et de systèmes d’exploitation (Windows, Linux, macOS, etc.).
 
-En Java, on peut écrire plusieurs instructions à la suite.
-Chaque instruction doit se terminer par un point-virgule **;** .
-Java est également sensible à la casse :  **Main , main et MAIN** sont considérés comme différents.
+Il est largement utilisé dans de nombreux domaines :
+
+* applications desktop,
+* applications web,
+* applications mobiles (notamment Android),
+* logiciels bancaires et industriels,
+* systèmes embarqués.
+
+Java est connu pour sa portabilité, résumée par son slogan célèbre :
+
+> **“Write once, run anywhere”**
+> *(Écrire une fois, exécuter partout)*
+
+Cela signifie qu’un programme Java peut être exécuté sur différentes plateformes sans être réécrit.
+
+
+## Comment fonctionne un programme Java ?
+
+Contrairement à certains langages, un programme Java **n’est pas exécuté directement par le système d’exploitation**.
+
+Le code Java est d’abord :
+
+1. **écrit** par le développeur,
+2. **compilé** en un format intermédiaire appelé *bytecode*,
+3. **exécuté** par un environnement spécifique à Java.
+
+C’est ce fonctionnement qui rend Java portable et indépendant du système.
+
+
+### La JVM (Java Virtual Machine)
+
+La **JVM** est la **machine virtuelle Java**.
+
+Son rôle est fondamental :
+
+* elle exécute le *bytecode* Java,
+* elle fait le lien entre le programme Java et le système d’exploitation,
+* elle gère automatiquement la mémoire,
+* elle assure la sécurité de l’exécution.
+
+Chaque système d’exploitation possède sa propre JVM, mais **le programme Java reste le même**, ce qui permet à Java de fonctionner partout.
+
+
+### Le JRE (Java Runtime Environment)
+
+Le **JRE** est l’**environnement nécessaire pour exécuter un programme Java**.
+
+Il contient :
+
+* la **JVM**,
+* les bibliothèques Java indispensables au fonctionnement des applications.
+
+ Le JRE permet **d’utiliser** un programme Java,
+mais **pas de le créer**.
+
+Un utilisateur final a généralement seulement besoin du JRE.
+
+
+
+### Le JDK (Java Development Kit)
+
+Le **JDK** est l’**outil destiné aux développeurs Java**.
+
+Il contient :
+
+* le **JRE**,
+* le compilateur Java (`javac`),
+* des outils pour développer, tester et déboguer des programmes.
+
+Le JDK est indispensable pour :
+
+* écrire du code Java,
+* compiler les fichiers `.java`,
+* créer des applications Java.
+
+
+
+### Écriture des premières instructions Java
+
+En Java :
+
+* un programme est composé d’instructions,
+* chaque instruction se termine par un **point-virgule (`;`)**,
+* Java est **sensible à la casse** :
+  `main`, `Main` et `MAIN` sont différents.
+
+Pour afficher un message à l’écran, on utilise par exemple :
+
+```java
+System.out.println("Bonjour Java !");
+```
+
+
+* **Java** : langage de programmation portable et orienté objet
+* **JVM** : exécute le programme Java
+* **JRE** : permet d’exécuter une application Java
+* **JDK** : permet de développer des applications Java
+
+
+##  Java vs JavaScript 
+
+Même si leurs noms se ressemblent, **Java et JavaScript n’ont aucun lien technique**.
+
+La confusion vient uniquement du nom.
+
+**Différence clé :**
+
+* **Java** → utilisé pour des applications complètes (logiciels, backend, Android)
+* **JavaScript** → utilisé pour rendre les pages web interactives
+
+ Ils ne s’exécutent pas dans le même environnement et n’ont pas le même rôle.
+
+
+* Java ≠ JavaScript
+* Apprendre Java **ne signifie pas** apprendre JavaScript
+* Ce sont deux parcours techniques différents
+
+
+
+##  Compilation vs Interprétation 
+
+Un programme doit être **traduit** pour être compris par l’ordinateur.
+Il existe deux approches principales.
+
+
+### Compilation
+
+* Le code est **traduit avant l’exécution**
+* Les erreurs sont détectées plus tôt
+* Le programme est plus structuré
+
+Java utilise **une compilation en bytecode**, puis une exécution.
+
+
+
+### Interprétation
+
+* Le code est **exécuté directement**
+* Les erreurs apparaissent à l’exécution
+* Approche plus souple et rapide à tester
+
+ JavaScript fonctionne principalement de cette manière.
+
+* **Compilation** → préparation avant exécution
+* **Interprétation** → exécution immédiate
+* **Java** → compilation (modèle hybride)
+* **JavaScript** → interprétation
+
+
+## Installer Java (JDK) et un IDE
+
+###  Installer le JDK (Java 17 ou Java 21)
+
+Pour développer en Java, il faut installer le **JDK**.
+
+ **Java 17** et **Java 21** sont des versions **LTS** (Long Term Support).
+
+* **Java 17** : très répandue, stable, souvent utilisée en formation
+* **Java 21** : plus récente, recommandée si ton environnement l’accepte
+
+#### Étapes générales
+
+1. Télécharger le **JDK 17 ou 21**
+2. Lancer l’installateur
+3. Vérifier l’installation dans le terminal
+
+Commande de vérification :
+
+```bash
+java --version
+```
+
+Si une version s’affiche, Java est bien installé 
+
+![Image](https://utho.com/docs/windows/how-to-install-java-development-kit-on-windows-server/images/Screenshot_3-26.png)
+
+![Image](https://www.scaler.com/topics/images/checking-java-version-on-windows.webp)
+
+![Image](https://i.sstatic.net/3Atvv.jpg)
+
+
+
+###  Choisir un IDE (environnement de développement)
+
+Un **IDE** permet d’écrire, organiser et exécuter du code Java plus facilement.
+
+
+#### IntelliJ IDEA
+
+* Très intelligent et moderne
+* Excellente assistance au code
+* Version Community gratuite (suffisante pour Java)
+
+Idéal si tu veux un confort maximal
+
+
+
+#### Eclipse IDE
+
+* Spécialisé Java
+* Très utilisé en entreprise
+* Gratuit et robuste
+
+Bon choix académique et professionnel
+
+
+####  Visual Studio Code
+
+* Éditeur léger (pas un IDE Java natif)
+* Nécessite des extensions Java
+* Très polyvalent (HTML, CSS, JS, Python…)
+
+ Intéressant si tu travailles sur **plusieurs langages**
+
+![Image](https://resources.jetbrains.com/help/img/idea/2025.3/new_ui_dark_theme.png)
+
+![Image](https://math.hws.edu/eck/cs124/s21/eclipse-setup/textio-setup.png)
+
+![Image](https://code.visualstudio.com/assets/docs/java/extensions/extensions.png)
+
+
+#### Quel choix faire ?
+
+ **Recommandation simple** :
+
+* Débutant·e Java pur → **IntelliJ IDEA** ou **Eclipse**
+* Projet multi-langages / web → **VS Code**
+
+
+
+* Installer **JDK 17 ou 21**
+* Vérifier avec `java --version`
+* Choisir un IDE :
+
+  * IntelliJ → confort
+  * Eclipse → classique Java
+  * VS Code → polyvalent
+
+
 
 **Excercice pratique [INSTRUCTION](INSTRUCTION.md/)**
 
