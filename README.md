@@ -33,8 +33,7 @@ Objectif : progresser étape par étape avec des exercice concrets .
   - [Les opérateurs de logiques](#Les-opérateurs-de-comparaison)
 
 
-## Logique et exécution du programme
-
+## Logique et contrôle  du programme
 - [Les entrées utilisateur](#Les-entrées-utilisateurs)
 - [Les structures conditionnelles](#Les-structures-conditionnelles)
 - [Les structures conditionnelles itéraction](#Les-structures-conditionnelles-itéraction)
@@ -842,30 +841,16 @@ public class Main {
 }
 ```
 
-## Les structures conditionnelles
 
+## Les structures conditionnelles en Java
 
+Les structures conditionnelles permettent d’**exécuter différents blocs de code selon une situation donnée**.
+Elles contrôlent le **chemin d’exécution** du programme.
 
-### La prise de décision en programmation
-
-
-En programmation, les **instructions conditionnelles** permettent à un programme de **prendre des décisions** et d’exécuter des actions différentes **selon une condition**.
-
-Exemple :
-
-- Un jeu autorise l’accès à un niveau **si l’âge ou le score est suffisant**.
-- Un système affiche un message différent selon une **note**.
 
 ### L’instruction `if`
 
-L’instruction `if` est la **structure conditionnelle la plus utilisée** en Java.
-
-**Principe :**
-
-- Si la condition est **vraie (`true`)**, le code dans le bloc `if` est exécuté.
-- Si la condition est **fausse (`false`)**, le bloc est ignoré.
-
-#### Syntaxe générale
+`if` permet d’exécuter un bloc de code **uniquement lorsque la condition est vraie**.
 
 ```java
 if (condition) {
@@ -873,25 +858,7 @@ if (condition) {
 }
 ```
 
-### Les opérateurs de comparaison
-
-Les conditions utilisent des **opérateurs de comparaison** :
-
-| Opérateur | Signification       |
-| --------- | ------------------- |
-| `==`      | égal à              |
-| `!=`      | différent de        |
-| `<`       | inférieur à         |
-| `>`       | supérieur à         |
-| `<=`      | inférieur ou égal à |
-| `>=`      | supérieur ou égal à |
-
-**Attention**
-
-- `=` → opérateur d’affectation
-- `==` → opérateur de comparaison (test d’égalité)
-
-### Exemple simple avec `if`
+Exemple
 
 ```java
 int age = 18;
@@ -901,18 +868,13 @@ if (age >= 18) {
 }
 ```
 
-Ici, le message s’affiche **uniquement si l’âge est supérieur ou égal à 18**.
+Si la condition est fausse, le bloc est simplement ignoré.
 
-### L’instruction `if...else`
 
-Une instruction `if` peut être suivie d’un `else`.
 
-**Principe :**
+### L’instruction `if ... else`
 
-- Le bloc `if` s’exécute si la condition est vraie.
-- Sinon, le bloc `else` s’exécute.
-
-#### Syntaxe
+`else` permet de définir un **comportement alternatif**.
 
 ```java
 if (condition) {
@@ -922,7 +884,7 @@ if (condition) {
 }
 ```
 
-#### Exemple
+Exemple
 
 ```java
 int note = 9;
@@ -934,49 +896,25 @@ if (note >= 10) {
 }
 ```
 
-### Les conditions imbriquées (if dans if)
+ **Un seul bloc** est exécuté.
 
-Il est possible de placer une instruction `if` **à l’intérieur d’une autre**.
 
-#### Exemple
 
-```java
-int heure = 17;
+### Tester plusieurs cas avec `else if`
 
-if (heure > 0) {
-    if (heure <= 16) {
-        System.out.println("Welcome");
-    } else {
-        System.out.println("Too late");
-    }
-} else {
-    System.out.println("Erreur");
-}
-```
-
-Cette méthode fonctionne mais peut rendre le code **moins lisible**.
-
-### L’instruction `else if`
-
-Pour tester **plusieurs conditions**, on utilise `else if`.
-
-C’est souvent **préférable aux if imbriqués**.
-
-#### Syntaxe
+`else if` permet d’enchaîner plusieurs conditions **sans imbriquer plusieurs `if`**.
 
 ```java
-
 if (condition1) {
     // code
 } else if (condition2) {
     // code
 } else {
-    // code par défaut
+    // cas par défaut
 }
-
 ```
 
-### Exemple clair avec `if / else if / else`
+ Exemple
 
 ```java
 int heure = 15;
@@ -986,53 +924,17 @@ if (heure <= 0) {
 } else if (heure <= 16) {
     System.out.println("Welcome");
 } else {
-    System.out.println("Too late, too young");
+    System.out.println("Too late");
 }
 ```
 
-Le programme vérifie les conditions **dans l’ordre**, et exécute **un seul bloc**.
-
-### Exemple concret : programme de facturation
-
-```java
-double total = 120.0;
-
-if (total >= 100) {
-    total = total * 0.9; // remise de 10 %
-    System.out.println("Remise appliquée");
-} else {
-    System.out.println("Pas de remise");
-}
-
-System.out.println("Total à payer : " + total + " €");
-```
-
-### L’instruction conditionnelle switch
+Les conditions sont évaluées **dans l’ordre**, une seule branche s’exécute.
 
 
 
-Dans certains programmes, il est nécessaire de **tester une même variable contre plusieurs valeurs possibles**.
+## L’instruction `switch`
 
-Exemple :
-
-- Un programme reçoit un **numéro de jour** et affiche le **jour de la semaine correspondant**.
-- Un menu propose plusieurs **choix numérotés**.
-- Un système attribue une action selon un **code**.
-
-Lorsque l’on utilise plusieurs `if / else if`, le code peut devenir **long et difficile à lire**.
-Dans ce cas, on utilise l’instruction **`switch`**.
-
-### Qu’est-ce qu’un `switch` ?
-
-L’instruction `switch` permet de **comparer une variable à plusieurs valeurs possibles** (appelées `case`).
-
-Principe :
-
-- La valeur testée est comparée à chaque `case`.
-- Lorsque la valeur correspond, le code associé s’exécute.
-- L’exécution s’arrête lorsqu’un `break` est rencontré.
-
-### Syntaxe générale du `switch`
+`switch` est utilisée lorsque l’on compare **une même variable** à **plusieurs valeurs précises**.
 
 ```java
 switch (variable) {
@@ -1043,110 +945,11 @@ switch (variable) {
         // code
         break;
     default:
-        // code exécuté si aucun cas ne correspond
+        // cas par défaut
 }
 ```
 
-### Exemple simple : jours de la semaine (partiel)
-
-```java
-int jour = 1;
-
-switch (jour) {
-    case 1:
-        System.out.println("Lundi");
-        break;
-    case 2:
-        System.out.println("Mardi");
-        break;
-    case 3:
-        System.out.println("Mercredi");
-        break;
-    default:
-        System.out.println("Jour invalide");
-}
-```
-
-Ici, seules les **trois premières valeurs** sont vérifiées.
-Tu peux continuer jusqu’à `7` pour couvrir toute la semaine.
-
-### Exemple complet : 7 jours de la semaine
-
-```java
-int jour = 5;
-
-switch (jour) {
-    case 1:
-        System.out.println("Lundi");
-        break;
-    case 2:
-        System.out.println("Mardi");
-        break;
-    case 3:
-        System.out.println("Mercredi");
-        break;
-    case 4:
-        System.out.println("Jeudi");
-        break;
-    case 5:
-        System.out.println("Vendredi");
-        break;
-    case 6:
-        System.out.println("Samedi");
-        break;
-    case 7:
-        System.out.println("Dimanche");
-        break;
-    default:
-        System.out.println("Numéro de jour invalide");
-}
-```
-
-### Rôle important du `break`
-
-Le mot-clé **`break` est essentiel**.
-
-Sans `break`, le programme continue d’exécuter **les cas suivants**, même si la valeur ne correspond plus.
-
-#### Exemple sans `break` (comportement indésirable)
-
-```java
-int jour = 1;
-
-switch (jour) {
-    case 1:
-        System.out.println("Lundi");
-    case 2:
-        System.out.println("Mardi");
-    case 3:
-        System.out.println("Mercredi");
-}
-```
-
-Résultat :
-
-```
-Lundi
-Mardi
-Mercredi
-```
-
-C’est pourquoi **chaque `case` doit généralement se terminer par un `break`**.
-
-### Le `default case`
-
-Le `default` est **optionnel**, mais fortement recommandé.
-
-Il s’exécute lorsque **aucun `case` ne correspond** à la valeur testée.
-
-```java
-default:
-    System.out.println("Valeur non reconnue");
-```
-
-Il permet de gérer les **erreurs ou cas imprévus**.
-
-### Exemple concret : menu utilisateur
+Exemple
 
 ```java
 int choix = 2;
@@ -1159,286 +962,105 @@ switch (choix) {
         System.out.println("Charger la partie");
         break;
     case 3:
-        System.out.println("Quitter le jeu");
+        System.out.println("Quitter");
         break;
     default:
         System.out.println("Choix invalide");
 }
 ```
 
-### Quand utiliser `switch` plutôt que `if / else` ?
 
-Utilise `switch` quand :
+### Le rôle du `break`
 
-- Tu testes **une seule variable**
-- Tu compares cette variable à **plusieurs valeurs précises**
-- Tu veux un code **plus lisible et structuré**
+`break` **interrompt l’exécution du `switch`**.
 
-Évite `switch` si :
+Sans `break`, les instructions suivantes s’exécutent également, ce qui est rarement souhaité.
 
-- Les conditions sont complexes (`>`, `<`, `&&`, `||`)
-- Les tests ne sont pas basés sur l’égalité
-
-### Conditions multiples et boucles en Java
-
-## Les conditions multiples
+ En pratique : **un `break` par `case`**.
 
 
 
-Dans certains cas, une **seule condition n’est pas suffisante**.
-On a souvent besoin de **combiner plusieurs conditions** pour prendre une décision.
+#### Choisir entre `if` et `switch`
 
-Exemple :
+* `if / else` → logique conditionnelle générale
+* `switch` → sélection basée sur des valeurs fixes
 
-- Vérifier si un âge est **supérieur à 18 ET inférieur à 50**
-- Vérifier si un utilisateur est **majeur OU administrateur**
-- Vérifier qu’une condition est **fausse**
-
-Pour cela, Java fournit des **opérateurs logiques**.
-
-### Les opérateurs logiques en Java
-
-| Opérateur | Nom       | Signification                             |         |                                        |
-| --------- | --------- | ----------------------------------------- | ------- | -------------------------------------- |
-| `&&`      | AND (ET)  | Toutes les conditions doivent être vraies |         |                                        |
-| `         |           | `                                         | OR (OU) | Au moins une condition doit être vraie |
-| `!`       | NOT (NON) | Inverse la condition                      |         |                                        |
+ Le choix dépend surtout de la **lisibilité du code**.
 
 
-### L’opérateur AND (`&&`)
+* `if` → exécute un bloc si la condition est vraie
+* `else` → alternative
+* `else if` → plusieurs cas
+* `switch` → choix parmi plusieurs valeurs
+* `break` → stoppe le `switch`
+
+
+Parfait. Voici une **leçon claire, concise et non répétitive**, centrée **uniquement sur les boucles en Java**.
+On part du principe que les **conditions** et les **opérateurs** sont déjà acquis.
 
 
 
-L’opérateur **ET** vérifie si **toutes les conditions sont vraies**.
+## Les boucles en Java
 
-#### Exemple
+Les boucles permettent de **répéter un bloc de code** tant qu’une condition reste vraie ou selon un nombre de répétitions donné.
 
-```java
-int age = 25;
+Java propose principalement :
 
-if (age > 18 && age < 50) {
-    System.out.println("Âge valide");
-}
-```
-
-Le message s’affiche uniquement si **les deux conditions sont vraies**.
-
-### L’opérateur OR (`||`)
-
-L’opérateur **OU** vérifie si **au moins une condition est vraie**.
-
-#### Exemple
-
-```java
-boolean estAdmin = true;
-int age = 16;
-
-if (age >= 18 || estAdmin) {
-    System.out.println("Accès autorisé");
-}
-```
-
-Ici, l’accès est autorisé même si l’âge est inférieur à 18, car l’utilisateur est administrateur.
-
-### L’opérateur NOT (`!`)
-
-L’opérateur **NOT** inverse une condition :
-
-- `true` devient `false`
-- `false` devient `true`
-
-#### Exemple
-
-```java
-boolean estConnecte = false;
-
-if (!estConnecte) {
-    System.out.println("Veuillez vous connecter");
-}
-```
-
-### Combiner plusieurs conditions
-
-On peut combiner plusieurs conditions avec des **parenthèses** pour plus de clarté.
-
-#### Exemple
-
-```java
-int age = 30;
-boolean permis = true;
-
-if ((age >= 18 && age <= 65) && permis) {
-    System.out.println("Autorisé à conduire");
-}
-```
-
-## Les structures itératives (boucle)
+* `while`
+* `do while`
+* `for`
 
 
-
-Les **boucles** permettent de **répéter un bloc de code plusieurs fois** tant qu’une condition est vraie.
-
-Exemple :
-
-- Afficher les nombres de 1 à 10
-- Calculer une somme
-- Parcourir une liste
 
 ### La boucle `while`
 
-La boucle `while` s’exécute **tant que la condition est vraie**.
-
-#### Syntaxe
+La boucle `while` répète un bloc **tant que la condition est vraie**.
+La condition est testée **avant chaque itération**.
 
 ```java
-while (condition) {
-    // code répété
+int i = 1;
+
+while (i <= 5) {
+    System.out.println(i);
+    i++;
 }
 ```
 
-### Exemple simple de boucle `while`
+Si la condition est fausse dès le départ, la boucle **ne s’exécute pas**.
 
-```java
-int x = 5;
 
-while (x > 0) {
-    System.out.println(x);
-    x = x - 1;
-}
-/*
-résultat
-   5
-   4
-   3
-   2
-   1
-*/
-   
-
-```
-
-La ligne `x = x - 1` est **essentielle**.
-Sans elle, la condition ne deviendrait jamais fausse → **boucle infinie**.
-
-### Incrémentation et décrémentation
-
-Java fournit des **opérateurs raccourcis** :
-
-| Opération   | Forme longue | Forme courte |
-| ----------- | ------------ | ------------ |
-| Décrémenter | `x = x - 1`  | `x--`        |
-| Incrémenter | `x = x + 1`  | `x++`        |
-
-#### Exemple
-
-```java
-int x = 5;
-
-while (x > 0) {
-    System.out.println(x);
-    x--;
-}
-```
-
-### Autres opérateurs abrégés
-
-Java permet aussi :
-
-```java
-x += 2;  // x = x + 2
-x -= 3;  // x = x - 3
-x *= 9;  // x = x * 9
-x /= 2;  // x = x / 2
-```
-
-### Exemple : afficher les nombres pairs
-
-```java
-int x = 0;
-
-while (x <= 10) {
-    System.out.println(x);
-    x += 2;
-}
-/*
-0
-2
-4
-6
-8
-10
-*/
-```
-
-### Exemple : calculer la somme de 1 à 100
-
-```java
-int num = 1;
-int somme = 0;
-
-while (num <= 100) {
-    somme += num;
-    num++;
-}
-
-System.out.println("La somme est : " + somme);
-
-//Lasomme est : 5050
-```
-
-La dernière instruction `print` est **en dehors** de la boucle.
 
 ### La boucle `do while`
 
-La boucle `do while` est une **variation de la boucle while**.
-
-Différence principale :
-
-- Le code s’exécute **au moins une fois**, même si la condition est fausse.
-
-#### Syntaxe
+La boucle `do while` fonctionne comme `while`, mais la condition est testée **après** l’exécution du bloc.
 
 ```java
-do {
-    // code exécuté au moins une fois
-} while (condition);
-```
-
-Note le **point-virgule `;`** à la fin.
-
-### Exemple avec condition fausse
-
-```java
-int x = 0;
+int i = 1;
 
 do {
-    System.out.println("Ce message s'affiche une fois");
-} while (x > 5);
+    System.out.println(i);
+    i++;
+} while (i <= 5);
 ```
 
-Même si la condition est fausse, le code s’exécute **une fois**.
+Le bloc s’exécute **au moins une fois**, même si la condition est fausse.
+
+
 
 ### Différence entre `while` et `do while`
 
-| while                     | do while                    |
+| `while`                   | `do while`                  |
 | ------------------------- | --------------------------- |
 | Condition testée avant    | Condition testée après      |
 | Peut ne jamais s’exécuter | S’exécute au moins une fois |
 
-## La boucle `for` en Java
 
-La boucle `for` est un **autre type de boucle** en Java.
-Elle est très utilisée lorsque l’on **connaît à l’avance le nombre de répétitions**.
 
-Exemples d’utilisation :
+### La boucle `for`
 
-- Afficher les nombres de 1 à 10
-- Parcourir un tableau
-- Répéter une action un nombre précis de fois
+La boucle `for` est utilisée lorsque le **nombre de répétitions est connu** à l’avance.
 
-## Structure de la boucle `for`
-
-La boucle `for` est composée de **trois parties** :
+#### Structure
 
 ```java
 for (initialisation; condition; incrémentation) {
@@ -1446,24 +1068,7 @@ for (initialisation; condition; incrémentation) {
 }
 ```
 
-### Détail des trois composants :
-
-1. **Initialisation**
-
-   - S’exécute **une seule fois**, au début de la boucle
-   - Sert à déclarer et initialiser la variable de contrôle
-
-2. **Condition**
-
-   - Testée **avant chaque itération**
-   - Tant qu’elle est vraie, la boucle continue
-
-3. **Incrémentation / décrémentation**
-
-   - S’exécute **après chaque itération**
-   - Sert à modifier la variable de contrôle
-
-## Exemple simple de boucle `for`
+Exemple simple
 
 ```java
 for (int i = 1; i <= 5; i++) {
@@ -1471,35 +1076,39 @@ for (int i = 1; i <= 5; i++) {
 }
 ```
 
-Déroulement :
+`for` regroupe en une seule ligne :
 
-- `i` commence à 1
-- Tant que `i <= 5`, le code s’exécute
-- `i++` augmente la valeur de `i` de 1 à chaque tour
+* l’initialisation
+* la condition
+* la modification de la variable
 
-## Comparaison `while` vs `for`
+---
+
+### Comparaison `while` vs `for`
 
 ```java
-// avec while
+// while
 int i = 1;
 while (i <= 5) {
     System.out.println(i);
     i++;
 }
 
-// avec for
+// for
 for (int i = 1; i <= 5; i++) {
     System.out.println(i);
 }
 ```
 
-La boucle `for` est **plus compacte et plus lisible** quand on connaît les bornes.
+ `for` est plus **compact** quand les bornes sont connues.
 
-## Conditions et incrémentations personnalisées
 
-La boucle `for` peut utiliser **n’importe quelle condition** et **n’importe quelle incrémentation**.
 
-### Exemple : compter de 0 à 20 de 2 en 2
+### Incrémentations personnalisées
+
+La boucle `for` permet une grande flexibilité.
+
+### Exemple : compter de 2 en 2
 
 ```java
 for (int i = 0; i <= 20; i += 2) {
@@ -1507,7 +1116,9 @@ for (int i = 0; i <= 20; i += 2) {
 }
 ```
 
-## Exemple : calculer une somme
+---
+
+Exemple : calculer une somme
 
 ```java
 int somme = 0;
@@ -1519,18 +1130,13 @@ for (int i = 1; i <= 100; i++) {
 System.out.println("La somme est : " + somme);
 ```
 
-La variable `somme` accumule la valeur à chaque itération.
+La variable accumule une valeur à chaque itération.
 
-## Le contrôle de boucle : `break`
 
-L’instruction **`break`** permet de **quitter immédiatement la boucle**, même si la condition est encore vraie.
 
-`break` fonctionne :
+### Le contrôle de boucle : `break`
 
-- dans les `switch`
-- dans les boucles `while`, `do while` et `for`
-
-### Exemple simple avec `break`
+`break` permet de **quitter immédiatement une boucle**, même si elle pourrait continuer.
 
 ```java
 for (int i = 1; i <= 10; i++) {
@@ -1550,49 +1156,10 @@ Résultat :
 4
 ```
 
-La boucle s’arrête dès que `i == 5`.
 
-## Exemple concret : calculatrice avec arrêt
+### Le contrôle de boucle : `continue`
 
-Contexte : on additionne des nombres tant que l’utilisateur n’entre pas `-1`.
-
-```java
-import java.util.Scanner;
-
-public class Main {
-    public static void main(String[] args) {
-
-        Scanner sc = new Scanner(System.in);
-        int somme = 0;
-
-        while (true) {
-            System.out.print("Entrez un nombre (-1 pour arrêter) : ");
-            int nombre = sc.nextInt();
-
-            if (nombre == -1) {
-                break;
-            }
-
-            somme += nombre;
-        }
-
-        System.out.println("Somme totale : " + somme);
-    }
-}
-```
-
-Ici, `break` permet **d’arrêter la boucle volontairement**.
-
-## L’instruction `continue`
-
-L’instruction **`continue`** permet de :
-
-- **sauter l’itération en cours**
-- passer directement à la suivante
-
-Contrairement à `break`, la boucle **ne s’arrête pas**.
-
-### Exemple avec `continue`
+`continue` permet de **sauter l’itération en cours** et de passer à la suivante.
 
 ```java
 for (int i = 1; i <= 10; i++) {
@@ -1613,175 +1180,181 @@ Résultat :
 9
 ```
 
-Les nombres pairs sont ignorés.
+La boucle continue, mais certaines valeurs sont ignorées.
 
-## Les tableaux
 
-## Pourquoi utiliser des tableaux ?
+* `while` → condition testée avant
+* `do while` → exécution au moins une fois
+* `for` → nombre de répétitions connu
+* `break` → arrêt immédiat de la boucle
+* `continue` → saute une itération
 
-Imagine un programme qui doit stocker **l’âge de 10 utilisateurs**.
 
-Sans tableau
-Tu devrais créer :
+## Les tableaux en Java
 
-```java
-int age1, age2, age3, age4, age5, age6, age7, age8, age9, age10;
-```
+Un **tableau** permet de stocker **plusieurs valeurs du même type** dans une seule variable.
+Il est particulièrement utile lorsque l’on manipule des **listes de données**.
 
-C’est **long**, **répétitif** et **peu efficace**.
 
-Avec un tableau
-Un **tableau** permet de stocker **plusieurs valeurs du même type dans une seule variable**.
 
-## Qu’est-ce qu’un tableau ?
+### Déclarer et créer un tableau (1D)
 
-Un tableau :
-
-- contient **plusieurs valeurs**
-- toutes du **même type**
-- accessibles grâce à un **index**
-
-Exemple : un tableau d’âges
-
-```java
-int[] ages;
-```
-
-## Déclaration d’un tableau
-
-Pour déclarer un tableau, on utilise des **crochets `[]`** après le type.
-
-```java
-int[] ages;
-```
-
-Cela signifie :
-
-> `ages` est un tableau qui contiendra des entiers (`int`).
-
-Il est aussi possible d’écrire :
-
-```java
-int ages[];
-```
-
-Mais la **bonne pratique recommandée** est :
-
-```java
-int[] ages;
-```
-
-## Création d’un tableau (mot-clé `new`)
-
-Après la déclaration, il faut **créer le tableau** et préciser sa taille.
+Un tableau se déclare avec des **crochets `[]`**.
 
 ```java
 int[] ages = new int[5];
 ```
 
-Ici :
+* le tableau contient **5 entiers**
+* les index vont de `0` à `4`
 
-- le tableau peut stocker **5 entiers**
-- les index vont de `0` à `4`
+La taille d’un tableau est **fixe**.
 
-## 5️ Les index des tableaux
 
-Très important :
-Les index commencent **toujours à 0**
+### Les index des tableaux
 
-| Index | Position réelle |
-| ----- | --------------- |
-| 0     | 1er élément     |
-| 1     | 2e élément      |
-| 2     | 3e élément      |
-| 4     | 5e élément      |
+Les éléments d’un tableau sont accessibles grâce à un **index**, qui commence toujours à `0`.
 
-## Affecter des valeurs à un tableau
-
-On accède aux éléments avec les **crochets et l’index**.
+| Index | Élément |
+| ----- | ------- |
+| 0     | 1er     |
+| 1     | 2e      |
+| 2     | 3e      |
 
 ```java
-int[] ages = new int[5];
-
 ages[0] = 18;
 ages[1] = 21;
 ages[2] = 30;
-ages[3] = 25;
-ages[4] = 40;
+```
+
+
+### Lire une valeur dans un tableau
+
+```java
+System.out.println(ages[0]);
+System.out.println(ages[2]);
 ```
 
 `ages[2]` correspond au **troisième élément**.
 
-## Lire une valeur dans un tableau
 
-```java
-System.out.println(ages[0]); // affiche 18
-System.out.println(ages[3]); // affiche 25
-```
 
-## Initialisation directe d’un tableau
+### Initialisation directe
 
-Si tu connais déjà les valeurs, tu peux créer et remplir le tableau **en une seule ligne**.
+Si les valeurs sont connues à l’avance, on peut initialiser le tableau directement.
 
 ```java
 int[] nombres = {4, 6, 2, 1};
 ```
 
-Ici :
+* taille : 4
+* index : de `0` à `3`
 
-- taille du tableau = 4
-- index de `0` à `3`
+### Parcourir un tableau avec `for`
 
-## Exemple complet
-
-```java
-public class Main {
-    public static void main(String[] args) {
-
-        int[] notes = {12, 15, 9, 18, 14};
-
-        System.out.println("Première note : " + notes[0]);
-        System.out.println("Troisième note : " + notes[2]);
-    }
-}
-```
-
-## Parcourir un tableau avec une boucle `for`
-
-Très souvent, on utilise une **boucle for** avec les tableaux.
+La boucle `for` est très utilisée pour parcourir un tableau.
 
 ```java
-int[] ages = {18, 20, 25, 30, 35};
+int[] ages = {18, 20, 25, 30};
 
 for (int i = 0; i < ages.length; i++) {
-    System.out.println("Âge : " + ages[i]);
+    System.out.println(ages[i]);
 }
 ```
 
-`ages.length` donne la **taille du tableau**.
+length` donne la **taille du tableau**.
 
-## Exemple : calculer la moyenne
+
+
+### Parcourir un tableau avec `for-each`
+
+Java propose une syntaxe simplifiée pour parcourir un tableau.
+
+```java
+int[] ages = {18, 20, 25, 30};
+
+for (int age : ages) {
+    System.out.println(age);
+}
+```
+
+`for-each` est :
+
+* plus lisible
+* idéal quand on n’a pas besoin de l’index
+
+
+### Exemple : calculer une moyenne
 
 ```java
 int[] notes = {10, 12, 15, 18};
 int somme = 0;
 
-for (int i = 0; i < notes.length; i++) {
-    somme += notes[i];
+for (int note : notes) {
+    somme += note;
 }
 
 double moyenne = (double) somme / notes.length;
 System.out.println("Moyenne : " + moyenne);
 ```
 
-## Erreur fréquente à éviter
+
+### Les tableaux à deux dimensions (2D)
+
+Un tableau 2D est un **tableau de tableaux**.
+
+```java
+int[][] grille = new int[2][3];
+```
+
+* 2 lignes
+* 3 colonnes
+
+#### Initialisation directe
+
+```java
+int[][] matrice = {
+    {1, 2, 3},
+    {4, 5, 6}
+};
+```
+
+### Accéder à un tableau 2D
+
+```java
+System.out.println(matrice[0][1]); // 2
+System.out.println(matrice[1][2]); // 6
+```
+
+* premier index → ligne
+* second index → colonne
+
+
+### Parcourir un tableau 2D
+
+```java
+for (int i = 0; i < matrice.length; i++) {
+    for (int j = 0; j < matrice[i].length; j++) {
+        System.out.println(matrice[i][j]);
+    }
+}
+```
+
+
+ Erreur fréquente
 
 Accéder à un index inexistant :
 
 ```java
-ages[5] = 50; // ERREUR si le tableau a une taille de 5
+ages[5] = 40; // ERREUR si le tableau a une taille de 5
 ```
 
-Dernier index valide = `taille - 1`
+Dernier index valide = `length - 1`
 
-**To be continued...**
+
+* Un tableau stocke plusieurs valeurs du même type
+* Les index commencent à `0`
+* `length` donne la taille
+* `for` et `for-each` servent au parcours
+* Les tableaux 2D représentent lignes et colonnes
+
