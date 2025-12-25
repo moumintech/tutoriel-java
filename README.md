@@ -58,6 +58,11 @@ Objectif : progresser étape par étape avec des exercice concrets .
 
 ## Programmation Orienté Objet (POO)
 
+- [Les classes et les objets en Java](#Les-classes-et-les-objets-en-Java)
+  - [Les attributs (caractéristiques)](#Les-attributs-(caractéristiques))
+  - [Les méthodes (comportement)](#Les-méthodes-(comportement))
+  - [Le constructeur](#Le-constructeur)
+
 
 
 
@@ -1576,4 +1581,182 @@ v.accelerer();
 * **Méthodes** → actions
 * **Constructeur** → initialise l’objet
 * **this** → référence à l’objet courant
+
+
+
+## L’encapsulation en Java
+
+L’**encapsulation** est un principe fondamental de la programmation orientée objet.
+Elle consiste à **protéger les données** d’une classe et à **contrôler leur accès**.
+
+ L’idée clé :
+**les attributs ne doivent pas être accessibles directement depuis l’extérieur**.
+
+
+
+### Pourquoi l’encapsulation ?
+
+Sans encapsulation :
+
+* les données peuvent être modifiées n’importe comment
+* le code devient difficile à maintenir
+* les erreurs sont plus fréquentes
+
+Avec encapsulation :
+
+* les données sont protégées
+* les règles sont centralisées
+* le code est plus sûr et plus lisible
+
+
+
+### Les modificateurs d’accès
+
+Java utilise des **modificateurs d’accès** pour contrôler la visibilité.
+
+#### `private`
+
+* accessible **uniquement dans la classe**
+* utilisé pour les **attributs**
+
+#### `public`
+
+* accessible **depuis n’importe quelle classe**
+* utilisé pour les **méthodes**
+ Règle générale :
+
+> **Attributs → `private`
+> Méthodes → `public`**
+
+
+
+Exemple sans encapsulation (à éviter)
+
+```java
+class Compte {
+    double solde;
+}
+```
+
+ Ici, n’importe qui peut modifier `solde` librement.
+
+
+### Encapsulation avec `private`
+
+On rend les attributs **privés**.
+
+```java
+class Compte {
+    private double solde;
+}
+```
+
+L’attribut n’est plus accessible directement depuis l’extérieur.
+
+
+### Les getters
+
+Un **getter** est une méthode qui permet de **lire** la valeur d’un attribut privé.
+
+#### Syntaxe
+
+```java
+public type getNomAttribut() {
+    return attribut;
+}
+```
+
+Exemple
+
+```java
+class Compte {
+    private double solde;
+
+    public double getSolde() {
+        return solde;
+    }
+}
+```
+
+ Le getter donne un **accès contrôlé en lecture**.
+
+
+### Les setters
+
+Un **setter** est une méthode qui permet de **modifier** la valeur d’un attribut privé.
+
+#### Syntaxe
+
+```java
+public void setNomAttribut(type valeur) {
+    attribut = valeur;
+}
+```
+
+
+```java
+class Compte {
+    private double solde;
+
+    public void setSolde(double solde) {
+        this.solde = solde;
+    }
+}
+```
+
+Le setter permet d’ajouter des **règles de validation**.
+
+
+
+Exemple avec contrôle
+
+```java
+class Compte {
+    private double solde;
+
+    public double getSolde() {
+        return solde;
+    }
+
+    public void setSolde(double solde) {
+        if (solde >= 0) {
+            this.solde = solde;
+        }
+    }
+}
+```
+
+Le solde ne peut jamais être négatif.
+
+
+
+### Utilisation depuis une autre classe
+
+```java
+Compte c = new Compte();
+
+c.setSolde(1000);
+System.out.println(c.getSolde());
+```
+
+On **ne touche jamais directement** à l’attribut.
+
+
+
+### Convention de nommage
+
+* Getter → `getNomAttribut`
+* Setter → `setNomAttribut`
+* Attributs → `private`
+* Méthodes → `public`
+
+Ces conventions sont **standard en Java**.
+
+
+* L’encapsulation protège les données
+* Les attributs sont `private`
+* Les méthodes sont `public`
+* Les getters lisent les valeurs
+* Les setters modifient les valeurs
+* Les règles sont centralisées dans la classe
 
