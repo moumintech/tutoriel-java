@@ -48,8 +48,8 @@ Objectif : progresser étape par étape avec des exercice concrets .
   - [Différence entre while et do while](#Différence-entre-while-et-do-while)
   - [La boucle for ](#La-boucle-for)
   - [Comparaison while vs for](#Comparaison-while-vs-for)
-  - [Le contrôle de boucle : break](#Le-contrôle-de-boucle-:-break)
-  - [Le contrôle de boucle : continue](#Le-contrôle-de-boucle-:-continue)
+  - [Le contrôle de boucle break](#Le-contrôle-de-boucle-break)
+  - [Le contrôle de boucle continue](#Le-contrôle-de-boucle-continue)
    
 - [Les tableaux en Java](#Les-tableaux-en-Java)
   - [Parcours un tableau avec for](#Parcours-un-tableau-avec-for)
