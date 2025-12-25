@@ -62,8 +62,12 @@ Objectif : progresser étape par étape avec des exercice concrets .
   - [Les attributs (caractéristiques)](#Les-attributs-(caractéristiques))
   - [Les méthodes (comportement)](#Les-méthodes-(comportement))
   - [Le constructeur](#Le-constructeur)
-
-
+    
+- [L'encapsulation en Java](#L'encapsulation-en-Java)
+  - [private](#private)
+  - [public](#public)
+  - [Les getters](Les-getters)
+  - [Les setters](Les-setters)
 
 
    
@@ -1759,4 +1763,194 @@ Ces conventions sont **standard en Java**.
 * Les getters lisent les valeurs
 * Les setters modifient les valeurs
 * Les règles sont centralisées dans la classe
+
+
+
+## L’héritage et le polymorphisme en Java
+
+L’**héritage** permet de créer une nouvelle classe à partir d’une classe existante.
+Le **polymorphisme** permet d’utiliser un même comportement de manière différente selon l’objet.
+
+Ces deux notions vont toujours **ensemble**.
+
+
+
+### L’héritage : `extends`
+
+L’héritage permet à une classe **enfant** de récupérer :
+
+* les attributs
+* les méthodes
+  d’une classe **parent**.
+
+Syntaxe
+
+```java
+class Enfant extends Parent {
+}
+```
+
+Exemple
+
+```java
+class Animal {
+    void manger() {
+        System.out.println("L'animal mange");
+    }
+}
+
+class Chien extends Animal {
+}
+```
+
+ `Chien` hérite automatiquement de la méthode `manger()`.
+
+
+
+### Utilisation d’une classe héritée
+
+```java
+Chien c = new Chien();
+c.manger();
+```
+
+Résultat :
+
+```
+L'animal mange
+```
+
+ La classe enfant peut utiliser le comportement du parent **sans le réécrire**.
+
+
+
+### Le mot-clé `super`
+
+`super` permet de faire référence à la **classe parente**.
+
+Il est utilisé :
+
+* pour appeler le **constructeur du parent**
+* pour accéder à une **méthode du parent**
+
+
+
+#### Appeler le constructeur parent
+
+```java
+class Animal {
+    String nom;
+
+    Animal(String nom) {
+        this.nom = nom;
+    }
+}
+
+class Chien extends Animal {
+    Chien(String nom) {
+        super(nom);
+    }
+}
+```
+
+ `super(nom)` appelle le constructeur de `Animal`.
+
+
+
+#### Appeler une méthode du parent
+
+```java
+class Chien extends Animal {
+    void manger() {
+        super.manger();
+        System.out.println("Le chien mange des croquettes");
+    }
+}
+```
+
+
+
+### Redéfinir une méthode : `@Override`
+
+Une classe enfant peut **modifier le comportement** d’une méthode héritée.
+C’est ce qu’on appelle la **redéfinition**.
+
+Exemple
+
+```java
+class Animal {
+    void crier() {
+        System.out.println("L'animal fait un bruit");
+    }
+}
+
+class Chien extends Animal {
+    @Override
+    void crier() {
+        System.out.println("Le chien aboie");
+    }
+}
+```
+
+La méthode du parent est remplacée par celle de l’enfant.
+
+
+
+### Le polymorphisme
+
+Le **polymorphisme** permet d’utiliser une référence du type parent pour manipuler un objet enfant.
+
+Exemple
+
+```java
+Animal a = new Chien();
+a.crier();
+```
+
+Résultat :
+
+```
+Le chien aboie
+```
+
+Java appelle **la version de l’objet réel**, pas celle du type de référence.
+
+
+
+### Pourquoi le polymorphisme est puissant
+
+* le code est plus flexible
+* plus facile à étendre
+* moins dépendant des classes concrètes
+
+Exemple :
+
+```java
+Animal[] animaux = {
+    new Chien(),
+    new Chat()
+};
+
+for (Animal a : animaux) {
+    a.crier();
+}
+```
+
+Chaque objet réagit différemment.
+
+
+
+* `extends` → hériter d’une classe
+* une classe ne peut hériter que **d’une seule classe**
+* `super` → accéder au parent
+* `@Override` → redéfinir une méthode
+* le polymorphisme dépend de l’objet réel
+
+
+
+* L’héritage permet de réutiliser du code
+* `extends` crée une relation parent/enfant
+* `super` appelle le parent
+* `@Override` modifie un comportement
+* Le polymorphisme adapte le comportement selon l’objet
 
