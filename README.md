@@ -56,6 +56,8 @@ Objectif : progresser étape par étape avec des exercice concrets .
   - [Parcours un tableau avec for-each](#Parcours-un-tableau-avec-for-each)
   - [Les tableaux à deux dimensions(2D)](#Les-tableaux-à-deux-dimensions(2D))
 
+## Programmation Orienté Objet (POO)
+
 
 
 
@@ -1378,4 +1380,200 @@ Dernier index valide = `length - 1`
 * `length` donne la taille
 * `for` et `for-each` servent au parcours
 * Les tableaux 2D représentent lignes et colonnes
+
+
+## Les classes et les objets en Java
+
+Java est un langage **orienté objet**.
+Cela signifie que les programmes sont construits à partir de **classes** et d’**objets**.
+
+
+
+### La classe : le modèle
+
+Une **classe** est un **modèle** (ou un plan) qui décrit ce qu’un objet **est** et ce qu’il **peut faire**.
+
+Elle définit :
+
+* des **attributs** → ce que l’objet possède
+* des **méthodes** → ce que l’objet peut faire
+
+### Exemple de classe
+
+```java
+class Voiture {
+}
+```
+
+Cette classe ne fait encore rien, mais elle définit un **type**.
+
+
+
+### Les attributs (caractéristiques)
+
+Les **attributs** sont des **variables déclarées dans une classe**.
+Ils décrivent l’état de l’objet.
+
+Exemple
+
+```java
+class Voiture {
+    String marque;
+    int vitesse;
+}
+```
+
+Ici :
+
+* `marque` et `vitesse` sont des **attributs**
+* chaque objet `Voiture` aura **ses propres valeurs**
+
+
+
+### Les méthodes (comportements)
+
+Les **méthodes** sont des **fonctions définies dans une classe**.
+Elles décrivent les **actions** que l’objet peut réaliser.
+
+ Exemple
+
+```java
+class Voiture {
+    String marque;
+    int vitesse;
+
+    void accelerer() {
+        vitesse += 10;
+    }
+}
+```
+
+La méthode `accelerer` modifie l’état de l’objet.
+
+
+
+###  L’objet : une instance de classe
+
+Un **objet** est une **instance concrète** d’une classe.
+
+ La classe est le plan, l’objet est le résultat.
+
+#### Création d’un objet
+
+```java
+Voiture v1 = new Voiture();
+```
+
+* `Voiture` → type
+* `v1` → objet
+* `new` → création en mémoire
+
+
+### Utiliser les attributs et méthodes d’un objet
+
+On accède aux membres d’un objet avec le **point `.`**.
+
+```java
+v1.marque = "Toyota";
+v1.vitesse = 50;
+
+v1.accelerer();
+```
+
+Chaque objet possède **son propre état**.
+
+
+
+### Le constructeur
+
+Un **constructeur** est une méthode spéciale :
+
+* appelée automatiquement lors de la création d’un objet
+* sert à **initialiser les attributs**
+
+ Règles importantes
+
+* le constructeur porte **le même nom que la classe**
+* il n’a **pas de type de retour**
+
+Exemple
+
+```java
+class Voiture {
+    String marque;
+    int vitesse;
+
+    Voiture(String m, int v) {
+        marque = m;
+        vitesse = v;
+    }
+}
+```
+
+
+###  Créer un objet avec un constructeur
+
+```java
+Voiture v1 = new Voiture("Toyota", 50);
+Voiture v2 = new Voiture("BMW", 80);
+```
+
+ Chaque objet est créé avec des valeurs différentes.
+
+
+
+ `this` : référence à l’objet courant
+
+Le mot-clé `this` permet de faire référence à **l’objet en cours**.
+
+ Exemple
+
+```java
+class Voiture {
+    String marque;
+
+    Voiture(String marque) {
+        this.marque = marque;
+    }
+}
+```
+
+ `this.marque` désigne l’attribut
+ `marque` désigne le paramètre
+
+
+
+ Exemple complet
+
+```java
+class Voiture {
+    String marque;
+    int vitesse;
+
+    Voiture(String marque, int vitesse) {
+        this.marque = marque;
+        this.vitesse = vitesse;
+    }
+
+    void accelerer() {
+        vitesse += 10;
+    }
+}
+```
+
+Utilisation :
+
+```java
+Voiture v = new Voiture("Toyota", 50);
+v.accelerer();
+```
+
+
+
+* **Classe** → modèle
+* **Objet** → instance de la classe
+* **Attributs** → caractéristiques
+* **Méthodes** → actions
+* **Constructeur** → initialise l’objet
+* **this** → référence à l’objet courant
 
