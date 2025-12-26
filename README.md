@@ -30,6 +30,9 @@ Objectif : progresser étape par étape avec des exercice concrets .
   - [Le type String](#Le-type-String)
   - [La constante final](#La-constante-final)
   - [Convertion-de-type](#La-constante-final)
+  - [Exercice pratique](./INSTRUCTION.md)
+    
+  
     
 - [Les opérateurs en Java](#Les-opérateurs-en-Java)
   - [Les opérateurs arithmétiques](#Les-opérateurs-arithmétiques)
