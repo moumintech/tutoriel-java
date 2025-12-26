@@ -91,8 +91,8 @@ Objectif : progresser étape par étape avec des exercice concrets .
  
 - [Les exeption en Java](#Les-exeption-en-Java)
   - [Le bloc try/catch](#Le-bloc-try/catch)
-  - [Le bloc finally](#Le bloc finally)
-  - [le mot clés throws(#le-mot-clés-throws)
+  - [Le bloc finally](#Le-bloc-finally)
+  - [le mot clés throws](#le-mot-clés-throws)
   - [les exception personnalisées](#les-exception-personnalisées)
   - [Différence entre throw et throws](#Différence-entre-throw-et-throws)
     
