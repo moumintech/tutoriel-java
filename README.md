@@ -21,6 +21,7 @@ Objectif : progresser étape par étape avec des exercice concrets .
   - [Afficher un message](#Afficher-un-message)
   - [Les Commentaires](#Les-commentaire)
   - [Les conventions de nommage en Java](#Les-conventions-de-nommage-en-Java)
+  - [Exercice pratique](/tutoriel-java/INSTRUCTION.md/)
     
 - [Les variables et les types en Java ](#Les-variables-et-les-types-en-Java)
   - [Les types primitifs](#Les-types-primitifs)
