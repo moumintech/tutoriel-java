@@ -107,8 +107,17 @@ Objectif : progresser étape par étape avec des exercice concrets .
   - [Optional : éviter les null](#Optional-:-éviter-les-null)
   - [Introduction aux Streams](#Introduction-aux-Streams)
   - [Lien entre lambda et Stream](#Lien-entre-lambda-et-Stream)
+ 
+    
+- [Les bonnes pratiques en Java](#Les-bonnes-pratiques-en-Java)
+  - [Le Clean Code ](#Le-Clean-Code)
+  - [Organisation des packages](#Organisation-des-packages)
+  - [La JavaDoc](#La-JavaDoc)
+  - [Debug avec IDE](#Debug-avec-IDE)
 
   
+
+
 
 
 
