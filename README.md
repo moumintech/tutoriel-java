@@ -10,10 +10,10 @@ Objectif : progresser étape par étape avec des exercice concrets .
 ## Java fondamentale
 
 - [Découvrir Java](#Découvrir-Java)
-  - [Comment fonctionne un programme Java](#Comment-fonctionne-un-programme-Java)
+  - [Comment fonctionne un programme Java ?](#Comment-fonctionne-un-programme-Java-?)
   - [Différence Java vs JavaScript ](#Différence-Java-vs-JavaScript)
   - [Compilation vs Interprétation](#Compilation-vs-Interprétation)
-  - [Installer Java et un IDE](#Installer-Java-et-un-IDE)
+  - [Installer Java (JDK) et un IDE](#Installer-Java-(JDK)-et-un-IDE)
     
 - [La structure des programmes Java](#La-structure-des-programmes-Java)
   - [La classe](#La-classe)
@@ -121,7 +121,7 @@ Objectif : progresser étape par étape avec des exercice concrets .
 
 
 
-## Decouvrir Java
+## Découvrir Java
 
 Java est un **langage de programmation** utilisé pour créer des logiciels capables de fonctionner sur différents types de machines et de systèmes d’exploitation (Windows, Linux, macOS, etc.).
 
