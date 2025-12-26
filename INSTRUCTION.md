@@ -69,7 +69,7 @@ L’affichage doit être clair et compréhensible.
 
 # 🧩 Exercice Java — Fiche d’abonnement Internet
 
-Cette excercice fait parti de Java fondamentale de la section **Les variables et les types en Java** faire ici ->  [abonnement Internet](Concepts-basse/abonnement-Internet.java).
+Cette excercice fait parti de Java fondamentale de la section **Les variables et les types en Java** faire ici ->  [abonnement Internet](Concepts-base/abonnementInternet.java).
 ##  Objectif
 
 Créer un **programme Java simple** qui affiche les informations d’un abonnement Internet.
