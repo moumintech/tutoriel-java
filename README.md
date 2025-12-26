@@ -26,7 +26,7 @@ Objectif : progresser étape par étape avec des exercice concrets .
   - [Les types primitifs](#Les-types-primitifs)
   - [Le type String](#Le-type-String)
   - [La constante final](#La-constante-final)
-  - [Convertioon-de-type](#La-constante-final)
+  - [Convertion-de-type](#La-constante-final)
     
 - [Les opérateurs en Java](#Les-opérateurs-en-Java)
   - [Les opérateurs arithmétiques](#Les-opérateurs-arithmétiques)
@@ -66,8 +66,8 @@ Objectif : progresser étape par étape avec des exercice concrets .
 - [L'encapsulation en Java](#L'encapsulation-en-Java)
   - [private](#private)
   - [public](#public)
-  - [Les getters](Les-getters)
-  - [Les setters](Les-setters)
+  - [Les getters](#Les-getters)
+  - [Les setters](#Les-setters)
     
 - [L'Héritage et le polymorphisme en Java](#L'Héritage-et-le-polymorphisme-en-Java)
   - [L'héritage extends](#L'héritage-extends)
@@ -78,16 +78,23 @@ Objectif : progresser étape par étape avec des exercice concrets .
 - [L'abstration en Java](#L'abstration-en-Java)
   - [Les classes abstraites](#Les-classes-abstraites)
   - [Les Interfaces](#Les-Interfaces)
-  - [Implémenter une interface : implements]#(Implémenter-une-interface-:-implements)
+  - [Implémenter une interface : implements](#Implémenter-une-interface-:-implements)
 
 ## Structures avancées 
 
 - [Les collections en Java](Les-collections-en-Java)
-  - [ArrayList (implémentation de List)](ArrayList-(implémentation-de-List))
-  - [HashSet(implémentation de Set)](HashSet-(implémentation-de-Set))
-  - [HashMap(implémentation de Map)](HashSet-(implémentation-de-Map))
-  - [Parcourir une collection avec Iterator](Parcourir-une-collection-avec-Iterator)
-  - [Comparaison List/Set/Map](Comparaison-List/Set/Map)
+  - [ArrayList (implémentation de List)](#ArrayList-(implémentation-de-List))
+  - [HashSet(implémentation de Set)](#HashSet-(implémentation-de-Set))
+  - [HashMap(implémentation de Map)](#HashSet-(implémentation-de-Map))
+  - [Parcourir une collection avec Iterator](#Parcourir-une-collection-avec-Iterator)
+  - [Comparaison List/Set/Map](#Comparaison-List/Set/Map)
+ 
+- [Les exeption en Java](#Les-exeption-en-Java)
+  - [Le bloc try/catch](#Le-bloc-try/catch)
+  - [Le bloc finally](#Le bloc finally)
+  - [le mot clés throws(#le-mot-clés-throws)
+  - [les exception personnalisées](#les-exception-personnalisées)
+  - [Différence entre throw et throws](#Différence-entre-throw-et-throws)
 
 
 ## Decouvrir Java
@@ -2496,5 +2503,167 @@ Les exceptions personnalisées rendent le code **plus explicite et plus lisible*
 * `throws` → délègue la gestion
 * `throw` → déclenche une exception
 * Exception personnalisée → règles métier claires
+
+
+
+## Entrée utilisateur et fichiers en Java
+
+Java permet :
+
+* de **lire des données saisies par l’utilisateur**
+* de **lire et écrire des données dans des fichiers**
+
+Ces opérations sont essentielles pour créer des programmes interactifs et persistants.
+
+
+
+### L’entrée utilisateur avec `Scanner`
+
+La classe `Scanner` permet de lire des données depuis différentes sources, notamment le **clavier**.
+
+### Création d’un Scanner
+
+```java
+Scanner sc = new Scanner(System.in);
+```
+
+`System.in` représente l’entrée standard (le clavier).
+
+
+
+#### Lire des données
+
+```java
+System.out.print("Entrez votre âge : ");
+int age = sc.nextInt();
+
+System.out.print("Entrez votre prénom : ");
+String prenom = sc.next();
+```
+
+Méthodes courantes :
+
+* `nextInt()` → entier
+* `nextDouble()` → nombre décimal
+* `next()` → mot
+* `nextLine()` → ligne complète
+
+
+
+#### Fermer le Scanner
+
+```java
+sc.close();
+```
+Bonne pratique pour libérer les ressources.
+
+
+
+### La classe `File`
+
+La classe `File` représente un **fichier ou un dossier** sur le disque.
+Elle ne lit pas le contenu : elle décrit **l’emplacement**.
+
+#### Créer un objet File
+
+```java
+File fichier = new File("data.txt");
+```
+
+
+#### Vérifier l’existence d’un fichier
+
+```java
+if (fichier.exists()) {
+    System.out.println("Le fichier existe");
+}
+```
+
+
+
+### Lecture d’un fichier avec `BufferedReader`
+
+`BufferedReader` permet de **lire un fichier ligne par ligne**.
+
+#### Étapes de lecture
+
+1. créer un `FileReader`
+2. l’envelopper dans un `BufferedReader`
+3. lire avec `readLine()`
+ Exemple
+
+```java
+File fichier = new File("data.txt");
+
+BufferedReader reader = new BufferedReader(new FileReader(fichier));
+String ligne;
+
+while ((ligne = reader.readLine()) != null) {
+    System.out.println(ligne);
+}
+
+reader.close();
+```
+
+`readLine()` retourne `null` à la fin du fichier.
+
+
+
+### Écriture dans un fichier avec `FileWriter`
+
+`FileWriter` permet d’**écrire du texte dans un fichier**.
+
+### Exemple simple
+
+```java
+FileWriter writer = new FileWriter("data.txt");
+writer.write("Bonjour Java");
+writer.close();
+```
+
+ Le contenu précédent est **écrasé**.
+
+
+
+#### Ajouter du contenu (mode append)
+
+```java
+FileWriter writer = new FileWriter("data.txt", true);
+writer.write("\nNouvelle ligne");
+writer.close();
+```
+
+
+
+ Exemple complet : saisie utilisateur + fichier
+
+```java
+Scanner sc = new Scanner(System.in);
+
+System.out.print("Entrez un message : ");
+String message = sc.nextLine();
+
+FileWriter writer = new FileWriter("message.txt", true);
+writer.write(message + "\n");
+writer.close();
+
+sc.close();
+```
+ Le message saisi est stocké dans un fichier.
+
+
+* `Scanner` → entrée utilisateur
+* `File` → représentation d’un fichier
+* `BufferedReader` → lecture efficace
+* `FileWriter` → écriture dans un fichier
+* Toujours **fermer les ressources**
+
+
+
+* `Scanner` lit les entrées clavier
+* `File` décrit un fichier
+* `BufferedReader` lit ligne par ligne
+* `FileWriter` écrit du texte
+* Les fichiers permettent de sauvegarder des données
 
 
