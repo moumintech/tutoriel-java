@@ -38,6 +38,7 @@ Objectif : progresser étape par étape avec des exercice concrets .
   - [Les opérateurs arithmétiques](#Les-opérateurs-arithmétiques)
   - [Les opérateurs de comparaison](#Les-opérateurs-de-comparaison)
   - [Les opérateurs de logiques](#Les-opérateurs-de-comparaison)
+  - [Exercice pratique](./INSTRUCTION.md)
 
 
 ## Logique et contrôle  du programme
