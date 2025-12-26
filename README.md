@@ -95,6 +95,11 @@ Objectif : progresser étape par étape avec des exercice concrets .
   - [le mot clés throws(#le-mot-clés-throws)
   - [les exception personnalisées](#les-exception-personnalisées)
   - [Différence entre throw et throws](#Différence-entre-throw-et-throws)
+    
+ - [Entrée utilisateur et fichier Java](#Entrée-utilisateur-et-fichier-en-Java)
+   - [Entrée utilisateur avec Scanner](#Entrée-utilisateur-avec-Scanner)
+   - [La classe File](#La-classe-File)
+   - [Lecture d'un fichier avec BufferredReader](#Lecture-d'un-fichier-avec-BufferredReader)
 
 
 ## Decouvrir Java
@@ -2665,5 +2670,181 @@ sc.close();
 * `BufferedReader` lit ligne par ligne
 * `FileWriter` écrit du texte
 * Les fichiers permettent de sauvegarder des données
+
+
+## Java moderne : concepts essentiels
+
+Le Java moderne introduit des outils qui rendent le code :
+
+* plus **lisible**
+* plus **expressif**
+* plus **sécurisé**
+
+Ces fonctionnalités ne changent pas les bases de Java, elles les **améliorent**.
+
+
+
+### `var` : inférence de type
+
+Le mot-clé `var` permet à Java de **déduire automatiquement le type** d’une variable à partir de sa valeur.
+
+ Exemple
+
+```java
+var nombre = 10;
+var texte = "Bonjour";
+var liste = new ArrayList<String>();
+```
+
+ Le type est connu **à la compilation**, pas à l’exécution.
+
+#### Règles importantes
+
+* `var` doit être **initialisé immédiatement**
+* il ne remplace pas les types partout
+* il améliore surtout la lisibilité
+
+ Interdit :
+
+```java
+var x; // erreur
+```
+
+
+
+### `Optional` : éviter les `null`
+
+`Optional` est une **boîte** qui peut contenir :
+
+* une valeur
+* ou rien
+
+ Objectif : **éviter les erreurs liées à `null`**.
+
+#### Création
+
+```java
+Optional<String> nom = Optional.of("Zam");
+Optional<String> vide = Optional.empty();
+```
+
+
+
+#### Vérifier la présence d’une valeur
+
+```java
+if (nom.isPresent()) {
+    System.out.println(nom.get());
+}
+```
+
+
+
+#### Valeur par défaut
+
+```java
+String resultat = nom.orElse("Inconnu");
+```
+
+`Optional` force à **gérer explicitement l’absence de valeur**.
+
+
+
+### Les expressions lambda
+
+Une **lambda** est une **fonction courte**, sans nom, utilisée pour exprimer un comportement.
+
+### Syntaxe
+
+```java
+(paramètres) -> expression
+```
+
+ Exemple
+
+```java
+(x) -> x * 2
+```
+
+ Les lambdas sont très utilisées avec les **collections** et les **streams**.
+
+
+
+### Introduction aux Streams
+
+Les **Streams** permettent de traiter des collections de façon **déclarative**.
+
+ On décrit **ce que l’on veut**, pas comment le faire.
+
+#### Exemple de base
+
+```java
+List<Integer> nombres = List.of(1, 2, 3, 4, 5);
+
+nombres.stream()
+       .forEach(n -> System.out.println(n));
+```
+
+
+
+### Opérations courantes sur les Streams
+
+### `filter` : filtrer des éléments
+
+```java
+nombres.stream()
+       .filter(n -> n % 2 == 0)
+       .forEach(System.out::println);
+```
+
+
+
+#### `map` : transformer des éléments
+
+```java
+nombres.stream()
+       .map(n -> n * 2)
+       .forEach(System.out::println);
+```
+
+
+
+#### `collect` : récupérer le résultat
+
+```java
+List<Integer> doubles =
+    nombres.stream()
+           .map(n -> n * 2)
+           .toList();
+```
+
+
+
+### Lien entre lambda et Stream
+
+Les Streams **utilisent massivement les lambdas** pour :
+
+* filtrer
+* transformer
+* parcourir les données
+
+Exemple combiné :
+
+```java
+List<String> noms = List.of("Ana", "Bob", "Zam");
+
+noms.stream()
+    .filter(n -> n.length() > 3)
+    .map(String::toUpperCase)
+    .forEach(System.out::println);
+```
+
+
+
+* `var` → type déduit automatiquement
+* `Optional` → alternative sûre à `null`
+* Lambda → fonction courte et expressive
+* Stream → traitement moderne des collections
+* Java moderne → code plus lisible et plus sûr
 
 
