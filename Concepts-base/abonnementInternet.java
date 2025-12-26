@@ -1,7 +1,7 @@
 public class AbonnementInternet {
 
 	public static void main(String[] args) {
-		// TODO Auto-generated method stub
+		
    String nomClient = " Anna ";
    int vitesseConnexion = 30;
    double prixMensuelAbonnement =24;
