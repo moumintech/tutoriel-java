@@ -100,6 +100,16 @@ Objectif : progresser étape par étape avec des exercice concrets .
    - [Entrée utilisateur avec Scanner](#Entrée-utilisateur-avec-Scanner)
    - [La classe File](#La-classe-File)
    - [Lecture d'un fichier avec BufferredReader](#Lecture-d'un-fichier-avec-BufferredReader)
+  
+## Java moderne et bonne pratiques 
+- [Java moderne : concepts essentiels](#Java-moderne-:-concepts-essentiels)
+  - [var : l'inférence de type](#var-:-l'inférence-de-type)
+  - [Optional : éviter les null](#Optional-:-éviter-les-null)
+  - [Introduction aux Streams](#Introduction-aux-Streams)
+  - [Lien entre lambda et Stream](#Lien-entre-lambda-et-Stream)
+
+  
+
 
 
 ## Decouvrir Java
@@ -2846,5 +2856,179 @@ noms.stream()
 * Lambda → fonction courte et expressive
 * Stream → traitement moderne des collections
 * Java moderne → code plus lisible et plus sûr
+
+
+
+
+## Les bonnes pratiques en Java
+
+Écrire du code qui fonctionne est une chose.
+Écrire du **code propre, lisible et maintenable** en est une autre.
+
+Les bonnes pratiques permettent :
+
+* de mieux comprendre le code
+* de faciliter la maintenance
+* de travailler efficacement en équipe
+
+
+### Le Clean Code
+
+Le **Clean Code** désigne un code :
+
+* simple à lire
+* facile à comprendre
+* facile à modifier
+
+#### Principes essentiels
+
+##### Noms explicites
+
+```java
+int a;      // mauvais
+int age;    // bon
+```
+ Un nom doit expliquer **ce que fait la variable**, sans commentaire.
+
+
+
+##### Méthodes courtes et claires
+
+```java
+void calculerTotal() {
+    // une seule responsabilité
+}
+```
+
+ Une méthode = **une action précise**.
+
+
+
+##### Éviter les valeurs magiques
+
+```java
+if (age >= 18) { }        // acceptable
+```
+
+Ou mieux :
+
+```java
+final int MAJORITE = 18;
+if (age >= MAJORITE) { }
+```
+
+
+
+### Organisation des packages
+
+Les **packages** servent à organiser le code en dossiers logiques.
+
+#### Pourquoi utiliser des packages ?
+
+* structurer le projet
+* éviter les conflits de noms
+* améliorer la lisibilité
+
+ Exemple d’organisation
+
+```
+com.app
+ ├─ model
+ ├─ service
+ ├─ controller
+ └─ utils
+```
+
+ Chaque package a **un rôle clair**.
+
+
+
+### Déclaration d’un package
+
+```java
+package com.app.model;
+```
+
+ Toujours placer la déclaration **en haut du fichier**.
+
+
+### La JavaDoc
+
+La **JavaDoc** permet de documenter le code **directement dans les classes et méthodes**.
+
+#### Pourquoi utiliser la JavaDoc ?
+
+* expliquer l’utilité du code
+* générer une documentation automatique
+* faciliter la compréhension pour les autres développeurs
+
+
+ Exemple de JavaDoc
+
+```java
+/**
+ * Représente un utilisateur.
+ */
+class Utilisateur {
+
+    /**
+     * Retourne l'âge de l'utilisateur.
+     * @return âge
+     */
+    public int getAge() {
+        return age;
+    }
+}
+```
+
+ La JavaDoc décrit **le pourquoi**, pas le comment.
+
+
+
+### Le débogage avec l’IDE
+
+Le **debug** permet de comprendre **ce que fait réellement le programme** à l’exécution.
+
+### Outils de base dans un IDE
+
+* points d’arrêt (breakpoints)
+* exécution pas à pas
+* inspection des variables
+
+
+
+#### Breakpoint
+
+ Un **point d’arrêt** stoppe le programme à une ligne précise.
+
+* permet de voir les valeurs des variables
+* aide à comprendre les erreurs logiques
+
+
+
+#### Exécution pas à pas
+
+* **Step Over** → passe à la ligne suivante
+* **Step Into** → entre dans une méthode
+* **Step Out** → sort de la méthode
+
+ Le debug est **plus efficace que les `System.out.println`**.
+
+
+###  Bonnes habitudes à adopter
+
+* nommer clairement classes, méthodes et variables
+* structurer le projet avec des packages cohérents
+* commenter intelligemment avec la JavaDoc
+* utiliser le debugger plutôt que multiplier les affichages
+* garder le code simple et lisible
+
+
+
+* Clean Code → lisible et maintenable
+* Packages → organisation logique
+* JavaDoc → documentation intégrée
+* Debug → compréhension réelle du programme
+* Bon code = code compréhensible
 
 
