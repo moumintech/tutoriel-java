@@ -147,4 +147,86 @@ L’affichage doit être **lisible et compréhensible**.
 
 
 
+# 🧩 Exercice Java — Validation d’un achat en ligne
+
+Cette excercice fait parti de Java fondamentale de la section **Les opérateurs en Java** faire ici ->  [Commande en ligne](Concepts-base/CommandeEnLigne.java).
+
+## Objectif
+
+Créer un **programme Java simple** qui valide ou refuse un achat en ligne.
+
+Cet exercice permet de pratiquer :
+- les **opérateurs arithmétiques**
+- les **opérateurs de comparaison**
+- les **opérateurs logiques**
+- la **logique de décision**
+
+
+
+##  Contexte
+
+Tu développes une application appelée **CommandeEnLigne**.
+
+Elle simule la validation d’un achat :
+le programme calcule un prix total, vérifie certaines conditions, puis indique si l’achat est possible.
+
+
+##  Travail demandé
+
+###  Classe
+
+- Créer une classe nommée **CommandeEnLigne**
+- Respecter les conventions Java (PascalCase)
+
+
+###  Variables
+
+Dans la méthode `main`, créer des variables pour :
+
+- le **prix d’un produit** (`double`)
+- la **quantité commandée** (`int`)
+- le **solde du client** (`double`)
+- le **statut client premium** (`boolean`)
+
+
+
+###  Calcul
+
+- Calculer le **prix total** de la commande
+- Stocker le résultat dans une variable
+
+
+
+###  Vérifications
+
+Vérifier :
+- si le solde du client permet de payer la commande
+- si la quantité est valide
+
+Utiliser des **opérateurs de comparaison**.
+
+
+
+###  Logique
+
+Déterminer si l’achat est accepté selon la règle suivante :
+
+- l’achat est possible si :
+  - le client a assez d’argent **ET** la quantité est valide  
+  **OU**
+  - le client est premium
+
+Utiliser des **opérateurs logiques** (`&&`, `||`, `!` si nécessaire).
+
+
+
+###  Affichage
+
+Afficher dans la console :
+- le prix total
+- le solde du client
+- si l’achat est **accepté ou refusé**
+
+L’affichage doit être clair et compréhensible.
+
 
