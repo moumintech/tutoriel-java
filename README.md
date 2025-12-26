@@ -2320,3 +2320,181 @@ while (it.hasNext()) {
 * `HashMap` → clé / valeur
 * `Iterator` → parcours générique
 
+## Les exceptions en Java
+
+Une **exception** représente une **erreur qui survient pendant l’exécution** d’un programme.
+Java permet de **détecter, gérer et contrôler** ces erreurs afin d’éviter l’arrêt brutal du programme.
+
+ Objectif : **sécuriser l’exécution** et gérer les cas imprévus.
+
+
+### Le bloc `try / catch`
+
+Le bloc `try` contient le code **susceptible de provoquer une erreur**.
+Le bloc `catch` permet de **traiter cette erreur**.
+
+### Syntaxe
+
+```java
+try {
+    // code à risque
+} catch (ExceptionType e) {
+    // gestion de l’erreur
+}
+```
+
+ Exemple simple
+
+```java
+try {
+    int result = 10 / 0;
+} catch (ArithmeticException e) {
+    System.out.println("Erreur : division par zéro");
+}
+```
+
+Le programme continue son exécution.
+
+
+
+## Plusieurs `catch`
+
+Il est possible de gérer **plusieurs types d’exceptions**.
+
+```java
+try {
+    int[] tab = {1, 2, 3};
+    System.out.println(tab[5]);
+} catch (ArithmeticException e) {
+    System.out.println("Erreur arithmétique");
+} catch (ArrayIndexOutOfBoundsException e) {
+    System.out.println("Index hors limites");
+}
+```
+
+ Le `catch` correspondant à l’erreur rencontrée est exécuté.
+
+
+
+### Le bloc `finally`
+
+Le bloc `finally` s’exécute **dans tous les cas**, qu’une exception ait lieu ou non.
+
+Il est utilisé pour :
+
+* fermer des ressources
+* libérer de la mémoire
+* exécuter un nettoyage final
+
+Exemple
+
+```java
+try {
+    System.out.println("Traitement en cours");
+} catch (Exception e) {
+    System.out.println("Erreur");
+} finally {
+    System.out.println("Fin du traitement");
+}
+```
+
+
+
+##  Le mot-clé `throws`
+
+`throws` permet de **déclarer qu’une méthode peut provoquer une exception**, sans la gérer elle-même.
+
+ Exemple
+
+```java
+void lireFichier() throws Exception {
+    // code pouvant lever une exception
+}
+```
+
+ La gestion de l’exception est **déléguée** à la méthode appelante.
+
+
+
+#### Utilisation avec `try / catch`
+
+```java
+try {
+    lireFichier();
+} catch (Exception e) {
+    System.out.println("Erreur lors de la lecture");
+}
+```
+
+
+### Lancer une exception : `throw`
+
+Le mot-clé `throw` permet de **déclencher volontairement une exception**.
+
+Exemple
+
+```java
+if (age < 0) {
+    throw new IllegalArgumentException("Âge invalide");
+}
+```
+
+Utile pour vérifier des règles métier.
+
+
+
+### Les exceptions personnalisées
+
+Il est possible de créer **ses propres exceptions** pour des cas spécifiques.
+
+#### Création d’une exception personnalisée
+
+```java
+class AgeInvalideException extends Exception {
+    public AgeInvalideException(String message) {
+        super(message);
+    }
+}
+```
+
+
+
+#### Utilisation
+
+```java
+void verifierAge(int age) throws AgeInvalideException {
+    if (age < 0) {
+        throw new AgeInvalideException("Âge négatif interdit");
+    }
+}
+```
+
+Appel :
+
+```java
+try {
+    verifierAge(-5);
+} catch (AgeInvalideException e) {
+    System.out.println(e.getMessage());
+}
+```
+
+Les exceptions personnalisées rendent le code **plus explicite et plus lisible**.
+
+
+
+## Différence entre `throw` et `throws`
+
+* `throw` → **lance** une exception
+* `throws` → **déclare** une exception possible
+
+
+
+* `try` → code à risque
+* `catch` → gestion de l’erreur
+* `finally` → exécuté quoi qu’il arrive
+* `throws` → délègue la gestion
+* `throw` → déclenche une exception
+* Exception personnalisée → règles métier claires
+
+
