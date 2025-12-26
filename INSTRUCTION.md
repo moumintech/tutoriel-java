@@ -1,6 +1,6 @@
 # 🌤️ Exercice : Météo
 
-Cette excercice fait parti de Java fondamentale de la section **Les structures des programme Java** faire ici ->  [Meteo](Concepts-basse/Meteo.java).
+Cette excercice fait parti de Java fondamentale de la section **Les structures des programme Java** faire ici ->  [Meteo](Concepts-base/Meteo.java).
 
 
 
