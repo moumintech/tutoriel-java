@@ -230,7 +230,7 @@ Afficher dans la console :
 
 # 🧩 Mini-projet Java — Gestion de Budget Mensuel
 
-Ce projet fait parti de **Java fondamental**  faire ici ->  [Gestion de Budget Mensuel(Concepts-base/BudgetMensuel.java).
+Ce projet fait parti de **Java fondamental**  faire ici ->  [Gestion de Budget Mensuel](Concepts-base/BudgetMensuel.java).
 
 ##  Objectif
 
