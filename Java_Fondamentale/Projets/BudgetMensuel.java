@@ -1,3 +1,4 @@
+package Projets;
 import java.util.Scanner;
 
 public class BudgetMensuel {

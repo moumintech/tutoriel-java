@@ -1,3 +1,4 @@
+package Exercices;
 public class CommandeEnLigne {
 
 	public static void main(String[] args) {

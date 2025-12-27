@@ -1,3 +1,5 @@
+package Exercices;
+
 public class AbonnementInternet {
 
 	public static void main(String[] args) {
