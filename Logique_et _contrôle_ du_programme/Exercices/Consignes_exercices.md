@@ -87,3 +87,138 @@ Utiliser un `switch` pour :
 ### Affichage
 
 Afficher un message clair correspondant à chaque choix.
+
+# Exercices Java — Boucles
+
+Aucun code fourni. Tu implémentes tout toi-même.
+
+Ces exercices permettent de pratiquer :
+
+- `while`
+- `do while`
+- `for`
+- `break`
+- `continue`
+
+## Exercice 1 — Gestion d’un code PIN (WHILE + BREAK)
+
+## Objectif
+
+Créer un programme Java qui vérifie un **code PIN** avec un nombre limité de tentatives.
+
+## Contexte
+
+Un utilisateur doit entrer un code PIN pour accéder à son compte.
+Après plusieurs tentatives incorrectes, l’accès est refusé.
+
+## Travail demandé
+
+### Classe
+
+- Créer une classe nommée **VerificationCodePin**
+
+### Données
+
+- un **code PIN correct** (stocké dans une variable)
+- un **code saisi** par l’utilisateur (`Scanner`)
+- un **compteur de tentatives**
+
+### Boucle
+
+- Utiliser une boucle `while`
+- Tant que :
+  - le code est incorrect
+  - et que les tentatives ne sont pas dépassées
+- redemander le code
+
+### Contrôle
+
+- Si le code est correct :
+  - afficher un message de succès
+  - interrompre la boucle avec `break`
+
+### Affichage final
+
+- accès accordé ou refusé
+- nombre de tentatives utilisées
+
+## Exercice 2 — Menu interactif (DO WHILE)
+
+## Objectif
+
+Créer un menu console qui s’affiche **au moins une fois** et se répète jusqu’à quitter.
+
+## Contexte
+
+Tu développes un menu simple pour une application console.
+
+## Travail demandé
+
+### Classe
+
+- Créer une classe nommée **MenuInteractif**
+
+### Menu
+
+Afficher un menu avec des options, par exemple :
+
+- 1 → Message de bienvenue
+- 2 → Afficher une information
+- 3 → Afficher une donnée fictive
+- 0 → Quitter
+
+### Boucle
+
+- Utiliser obligatoirement `do while`
+- Le menu se répète tant que l’utilisateur ne choisit pas `0`
+
+### Logique
+
+- Gérer les choix avec `if / else` ou `switch`
+- Le programme se termine proprement
+
+## Exercice 3 — Analyse de notes (FOR + CONTINUE)
+
+## Objectif
+
+Parcourir des données et ignorer les valeurs invalides.
+
+## Contexte
+
+Un enseignant analyse une série de notes.
+Certaines notes sont invalides et doivent être ignorées.
+
+## Travail demandé
+
+### Classe
+
+- Créer une classe nommée **AnalyseNotes**
+
+### Données
+
+- une série de notes définies dans le programme
+- une variable pour calculer un total ou une moyenne
+
+### Boucle
+
+- Parcourir les notes avec une boucle `for`
+
+### Contrôle
+
+- Si une note est :
+  - négative
+  - ou supérieure à la valeur maximale autorisée
+- l’ignorer avec `continue`
+
+### Affichage
+
+- afficher les notes prises en compte
+- afficher le résultat final (total ou moyenne)
+
+## Résultat attendu
+
+Trois programmes :
+
+- fonctionnels
+- bien structurés
+- utilisant correctement chaque type de boucle Java
