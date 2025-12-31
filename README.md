@@ -686,7 +686,7 @@ int y = 3;
 System.out.println(x + y); // 8
 ```
 
----
+
 
 ### Soustraction (`-`)
 
@@ -696,7 +696,6 @@ int taxe = 500;
 System.out.println(salaire - taxe); // 8500
 ```
 
----
 
 ### Multiplication (`*`)
 
