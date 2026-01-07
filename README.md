@@ -42,7 +42,7 @@ Objectif : progresser étape par étape avec des exercice concrets .
   - [L'instruction if ... else](#L'instruction-if-...-else)
   - [Tester plusieurs cas avec else if](#Tester-plusieurs-cas-avec-else-if)
   - [L'instruction switch](#L'instruction-switch)
-    [Exercice pratique](./INSTRUCTION.md)
+  - [Exercice pratique](./INSTRUCTION.md)
 
 - [Les boucles en Java ](#Les-boucles-en-Java)
 
@@ -53,14 +53,14 @@ Objectif : progresser étape par étape avec des exercice concrets .
   - [Comparaison while vs for](#Comparaison-while-vs-for)
   - [Le contrôle de boucle break](#Le-contrôle-de-boucle-break)
   - [Le contrôle de boucle continue](#Le-contrôle-de-boucle-continue)
-    [Exercice pratique](./INSTRUCTION.md)
+  - [Exercice pratique](./INSTRUCTION.md)
 
 - [Les tableaux en Java](#Les-tableaux-en-Java)
 
   - [Parcours un tableau avec for](#Parcours-un-tableau-avec-for)
   - [Parcours un tableau avec for-each](#Parcours-un-tableau-avec-for-each)
   - [Les tableaux à deux dimensions(2D)](<#Les-tableaux-à-deux-dimensions(2D)>)
-    [Exercice pratique](./INSTRUCTION.md)
+  - [Exercice pratique](./INSTRUCTION.md)
 
 - [Projet](./INSTRUCTION.md)
 
@@ -73,11 +73,12 @@ Objectif : progresser étape par étape avec des exercice concrets .
   - [Le constructeur](#Le-constructeur)
 
 - [L'encapsulation en Java](#L'encapsulation-en-Java)
+
   - [private](#private)
   - [public](#public)
   - [Les getters](#Les-getters)
   - [Les setters](#Les-setters)
-- [L'Héritage et le polymorphisme en Java](#L'Héritage-et-le-polymorphisme-en-Java)
+  - [L'Héritage et le polymorphisme en Java](#L'Héritage-et-le-polymorphisme-en-Java)
 
   - [L'héritage extends](#L'héritage-extends)
   - [Le mot-clé super](#Le-mot-clé-super)
@@ -619,8 +620,6 @@ int y = 3;
 System.out.println(x + y); // 8
 ```
 
-
-
 ### Soustraction (`-`)
 
 ```java
@@ -628,7 +627,6 @@ int salaire = 9000;
 int taxe = 500;
 System.out.println(salaire - taxe); // 8500
 ```
-
 
 ### Multiplication (`*`)
 
