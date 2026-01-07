@@ -30,7 +30,7 @@ Objectif : progresser étape par étape avec des exercice concrets .
   - [Les opérateurs arithmétiques](#Les-opérateurs-arithmétiques)
   - [Les opérateurs de comparaison](#Les-opérateurs-de-comparaison)
   - [Les opérateurs de logiques](#Les-opérateurs-de-comparaison)
-  - [Exercice pratique](./INSTRUCTION.md)
+  - [Exercice pratique](#Java_Fondamentale/Exercices/Consignes_Exercices.md)
 
 - [Projet](./INSTRUCTION.md)
 
