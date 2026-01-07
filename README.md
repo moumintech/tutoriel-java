@@ -60,7 +60,7 @@ Objectif : progresser étape par étape avec des exercice concrets .
 
   - [Parcours un tableau avec for](#Parcours-un-tableau-avec-for)
   - [Parcours un tableau avec for-each](#Parcours-un-tableau-avec-for-each)
-  - [Les tableaux à deux dimensions(2D)](<#Les-tableaux-à-deux-dimensions(2D)>)
+  - [Les tableaux à deux dimensions(2D)](#Les-tableaux-à-deux-dimensions(2D))
   - [Exercice pratique](./INSTRUCTION.md)
 
 - [Projet](./INSTRUCTION.md)
@@ -83,7 +83,7 @@ Objectif : progresser étape par étape avec des exercice concrets .
 
   - [L'héritage extends](#L'héritage-extends)
   - [Le mot-clé super](#Le-mot-clé-super)
-  - [Rédéfinition de méthodes(@Override)](<#Rédéfinition-de-méthodes(@Override)>)
+  - [Rédéfinition de méthodes(@Override)](#Rédéfinition-de-méthodes(@Override))
 
 - [L'abstration en Java](#L'abstration-en-Java)
   - [Les classes abstraites](#Les-classes-abstraites)
