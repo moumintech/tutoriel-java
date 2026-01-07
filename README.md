@@ -69,8 +69,8 @@ Objectif : progresser étape par étape avec des exercice concrets .
 
 - [Les classes et les objets en Java](#Les-classes-et-les-objets-en-Java)
 
-  - [Les attributs (caractéristiques)](<#Les-attributs-(caractéristiques)>>)
-  - [Les méthodes (comportement)](<#Les-méthodes-(comportement)>)
+  - [Les attributs (caractéristiques)](#Les-attributs-(caractéristiques))
+  - [Les méthodes (comportement)](#Les-méthodes-(comportement))
   - [Le constructeur](#Le-constructeur)
 
 - [L'encapsulation en Java](#L'encapsulation-en-Java)
