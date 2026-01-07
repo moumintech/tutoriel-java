@@ -1,17 +1,5 @@
 # Exercices Java — Classes et objets (POO – bases)
 
-Aucun code fourni. Tu implémentes tout toi-même.
-
-Ces exercices permettent de pratiquer :
-
-- classes
-- attributs
-- méthodes
-- constructeurs
-- création et utilisation d’objets
-
-Ils sont basés sur des scénarios simples et réalistes.
-
 ## Exercice 1 — Compte bancaire
 
 (Bases : classe, attributs, méthodes)
