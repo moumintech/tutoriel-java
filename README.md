@@ -31,9 +31,9 @@ Objectif : progresser étape par étape avec des exercice concrets .
   - [Les opérateurs arithmétiques](#Les-opérateurs-arithmétiques)
   - [Les opérateurs de comparaison](#Les-opérateurs-de-comparaison)
   - [Les opérateurs de logiques](#Les-opérateurs-de-comparaison)
-  - [Exercice pratique](.e/Exercices/Consignes_Exercices.md)
+  - [Exercice pratique](./Exercices/Consignes_Exercices.md)
 
-- [Projet](./INSTRUCTION.md)
+- [Projet](Java_Fondamentale/Projets/Consignes_Projets.md)
 
 ## Logique et contrôle du programme
 
