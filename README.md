@@ -43,7 +43,7 @@ Objectif : progresser étape par étape avec des exercice concrets .
   - [L'instruction if ... else](#L'instruction-if-...-else)
   - [Tester plusieurs cas avec else if](#Tester-plusieurs-cas-avec-else-if)
   - [L'instruction switch](#L'instruction-switch)
-  - [Exercice pratique](Logique et contrôle du programme/Exercices/Consignes_Exercices.md)
+  - [Exercice pratique](./Exercices/Consignes_Exercices.md)
 
 - [Les boucles en Java ](#Les-boucles-en-Java)
 
