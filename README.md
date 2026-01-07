@@ -25,13 +25,13 @@ Objectif : progresser étape par étape avec des exercice concrets .
   - [Le type String](#Le-type-String)
   - [La constante final](#La-constante-final)
   - [Convertion-de-type](#La-constante-final)
-  - [Exercice pratique](./Exercices/Consignes_Exercices.md)
+  - [Exercice pratique](Java_Fondamentale/Exercices/Consignes_Exercices.md)
     
 - [Les opérateurs en Java](#Les-opérateurs-en-Java)
   - [Les opérateurs arithmétiques](#Les-opérateurs-arithmétiques)
   - [Les opérateurs de comparaison](#Les-opérateurs-de-comparaison)
   - [Les opérateurs de logiques](#Les-opérateurs-de-comparaison)
-  - [Exercice pratique](./Exercices/Consignes_Exercices.md)
+  - [Exercice pratique](Java_Fondamentale/Exercices/Consignes_Exercices.md)
 
 - [Projet](Java_Fondamentale/Projets/Consignes_Projets.md)
 
@@ -43,7 +43,7 @@ Objectif : progresser étape par étape avec des exercice concrets .
   - [L'instruction if ... else](#L'instruction-if-...-else)
   - [Tester plusieurs cas avec else if](#Tester-plusieurs-cas-avec-else-if)
   - [L'instruction switch](#L'instruction-switch)
-  - [Exercice pratique](./INSTRUCTION.md)
+  - [Exercice pratique](Logique et contrôle du programme/Exercices/Consignes_Exercices.md)
 
 - [Les boucles en Java ](#Les-boucles-en-Java)
 
