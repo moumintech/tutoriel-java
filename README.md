@@ -43,7 +43,7 @@ Objectif : progresser étape par étape avec des exercice concrets .
   - [L'instruction if ... else](#L'instruction-if-...-else)
   - [Tester plusieurs cas avec else if](#Tester-plusieurs-cas-avec-else-if)
   - [L'instruction switch](#L'instruction-switch)
-  - [Exercice pratique](Logique et contrôle du programme/Exercices/Consignes_Exercices.md)
+  - [Exercice pratique](./Exercices/Consignes_Exercices.md)
 
 - [Les boucles en Java ](#Les-boucles-en-Java)
 
@@ -60,7 +60,7 @@ Objectif : progresser étape par étape avec des exercice concrets .
 
   - [Parcours un tableau avec for](#Parcours-un-tableau-avec-for)
   - [Parcours un tableau avec for-each](#Parcours-un-tableau-avec-for-each)
-  - [Les tableaux à deux dimensions(2D)](<#Les-tableaux-à-deux-dimensions(2D)>)
+  - [Les tableaux à deux dimensions(2D)](#Les-tableaux-à-deux-dimensions(2D))
   - [Exercice pratique](./INSTRUCTION.md)
 
 - [Projet](./INSTRUCTION.md)
@@ -69,8 +69,8 @@ Objectif : progresser étape par étape avec des exercice concrets .
 
 - [Les classes et les objets en Java](#Les-classes-et-les-objets-en-Java)
 
-  - [Les attributs (caractéristiques)](<#Les-attributs-(caractéristiques)>>)
-  - [Les méthodes (comportement)](<#Les-méthodes-(comportement)>)
+  - [Les attributs (caractéristiques)](#Les-attributs-(caractéristiques))
+  - [Les méthodes (comportement)](#Les-méthodes-(comportement))
   - [Le constructeur](#Le-constructeur)
 
 - [L'encapsulation en Java](#L'encapsulation-en-Java)
@@ -83,7 +83,7 @@ Objectif : progresser étape par étape avec des exercice concrets .
 
   - [L'héritage extends](#L'héritage-extends)
   - [Le mot-clé super](#Le-mot-clé-super)
-  - [Rédéfinition de méthodes(@Override)](<#Rédéfinition-de-méthodes(@Override)>)
+  - [Rédéfinition de méthodes(@Override)](#Rédéfinition-de-méthodes(@Override))
 
 - [L'abstration en Java](#L'abstration-en-Java)
   - [Les classes abstraites](#Les-classes-abstraites)
@@ -94,9 +94,9 @@ Objectif : progresser étape par étape avec des exercice concrets .
 
 - [Les collections en Java](Les-collections-en-Java)
 
-  - [ArrayList (implémentation de List)](<#ArrayList-(implémentation-de-List)>)
-  - [HashSet(implémentation de Set)](<#HashSet-(implémentation-de-Set)>)
-  - [HashMap(implémentation de Map)](<#HashSet-(implémentation-de-Map)>)
+  - [ArrayList (implémentation de List)](#ArrayList-(implémentation-de-List))
+  - [HashSet(implémentation de Set)](#HashSet-(implémentation-de-Set))
+  - [HashMap(implémentation de Map)](#HashSet-(implémentation-de-Map))
   - [Parcourir une collection avec Iterator](#Parcourir-une-collection-avec-Iterator)
   - [Comparaison List/Set/Map](#Comparaison-List/Set/Map)
 
